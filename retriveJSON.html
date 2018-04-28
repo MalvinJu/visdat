@@ -1,0 +1,45 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<script>
+
+    $(function() {
+
+
+   var people = [];
+
+   $.getJSON('https://raw.githubusercontent.com/MalvinJu/visdat/master/data/banjir.json', function(data) {
+       $.each(data, function(i, f) {
+          var tblRow = "<tr>" + "<td>" + f.tanggal + "</td>" +
+           "<td>" + f.longitude + "</td>" + "<td>" + f.latitude + "</td>" + "<td>" + f.korban + "</td>" + "</tr>"
+           $(tblRow).appendTo("#userdata tbody");
+     });
+
+   });
+
+});
+</script>
+</head>
+
+<body>
+
+<div class="wrapper">
+<div class="profile">
+   <table id= "userdata" border="2">
+  <thead>
+            <th>Tanggal</th>
+            <th>Longitude</th>
+            <th>Latitude</th>
+            <th>Keterangan</th>
+        </thead>
+      <tbody>
+
+       </tbody>
+   </table>
+
+</div>
+</div>
+
+</body>
+</html>
