@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
@@ -20,21 +20,33 @@
       #map {
         height: 70%;
       }
+      .mh1 div{
+        height: 70vh; /* 30% of viewport height*/
+      }
     </style>
   </head>
 
   <body>
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Disaster</a>
-    </nav>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
 
-    <div class="container-fluid bg-light">
+    <!-- <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Disaster</a>
+    </nav> -->
+
+    <div id ="main" class="container-fluid bg-light">
       <div class="row">
-        <main role="main" class="col-md-12 ml-sm-12 col-lg-12 px-4">
+        <main role="main" class="col-md-12 ml-sm-12 col-lg-12 pt-0 px-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Dashboard</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
+                <h1 class="lead pr-2 pt-2" style="font-size: 15px;cursor:pointer" onclick="openNav()">Filter</h1>
                 <h1 class="lead pr-2 pt-2" style="font-size: 15px;">Year </h1>
                 <div class="dropdown">
                   <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -94,14 +106,38 @@
           </div>
         </main>
 
-        <main class="col-md-12 ml-sm-12 col-lg-10 px-4">
-          
+        <main class="col-md-12 ml-sm-12 col-lg-12 px-4">
+          <div class="row row-eq-height">
+            <div class="col-md-9">
+              <div class="card flex-md-row box-shadow h-md-250 map-height">
+                  <div class="my-0 w-100" style="position: relative; height: 460px; overflow: hidden;" id="map"></div>
+              </div>
+            </div>
+            
+            <div class="col-md-3">
+              <div class="row">
+                <div class="col-md-12 pb-2">
+                  <div class="card flex-md-row box-shadow h-md-250 graph-height">
+                    <div class="card-body d-flex flex-column align-items-start pt-2 pb-2">
+                      <strong class="d-inline-block mb-2 text-primary">Kerugian</strong>
+                      <div id="barchart" style="weight:100%; height: 100%;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 pt-2">
+                  <div class="card flex-md-row box-shadow h-md-250 graph-height">
+                    <div class="card-body d-flex flex-column align-items-start pt-2 pb-2">
+                      <strong class="d-inline-block mb-2 text-primary">Total Bencana</strong>
+                      <h3 class="mb-0">
+                        1200
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-
-        
-          <div class="my-0 w-100" id="map" width="900" height="300" ></div>
-
-          <h2>Section title</h2>
+          <!-- <h2>Section title</h2>
           <div class="table-responsive">
             <table class="table table-striped table-sm">
               <thead>
@@ -228,7 +264,7 @@
                 </tr>
               </tbody>
             </table>
-          </div>
+          </div> -->
         </main>
       </div>
     </div>
@@ -237,7 +273,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="../../../../assets/js/vendor/popper.min.js"></script>
     <script src="../../../../dist/js/bootstrap.min.js"></script>
 
@@ -278,64 +313,113 @@
         }
       });
     </script>
-
-   <script>
-
-      function initMap() {
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 3,
-          center: {lat: -28.024, lng: 140.887}
-        });
-
-        // Create an array of alphabetical characters used to label the markers.
-        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-        // Add some markers to the map.
-        // Note: The code uses the JavaScript Array.prototype.map() method to
-        // create an array of markers based on a given "locations" array.
-        // The map() method here has nothing to do with the Google Maps API.
-        var markers = locations.map(function(location, i) {
-          return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length]
-          });
-        });
-
-        // Add a marker clusterer to manage the markers.
-        var markerCluster = new MarkerClusterer(map, markers,
-            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginRight = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
       }
-      var locations = [
-        {lat: -31.563910, lng: 147.154312},
-        {lat: -33.718234, lng: 150.363181},
-        {lat: -33.727111, lng: 150.371124},
-        {lat: -33.848588, lng: 151.209834},
-        {lat: -33.851702, lng: 151.216968},
-        {lat: -34.671264, lng: 150.863657},
-        {lat: -35.304724, lng: 148.662905},
-        {lat: -36.817685, lng: 175.699196},
-        {lat: -36.828611, lng: 175.790222},
-        {lat: -37.750000, lng: 145.116667},
-        {lat: -37.759859, lng: 145.128708},
-        {lat: -37.765015, lng: 145.133858},
-        {lat: -37.770104, lng: 145.143299},
-        {lat: -37.773700, lng: 145.145187},
-        {lat: -37.774785, lng: 145.137978},
-        {lat: -37.819616, lng: 144.968119},
-        {lat: -38.330766, lng: 144.695692},
-        {lat: -39.927193, lng: 175.053218},
-        {lat: -41.330162, lng: 174.865694},
-        {lat: -42.734358, lng: 147.439506},
-        {lat: -42.734358, lng: 147.501315},
-        {lat: -42.735258, lng: 147.438000},
-        {lat: -43.999792, lng: 170.463352}
-      ]
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginRight= "0";
+        document.body.style.backgroundColor = "white";
+      }
+
+      function retrieve_data_banjir() {
+        return $.getJSON('https://raw.githubusercontent.com/MalvinJu/visdat/master/data/banjir.json');
+      }
+
+      function draw_bar_graph() {
+        var data = google.visualization.arrayToDataTable([
+          ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
+           'Western', 'Literature', { role: 'annotation' } ],
+          ['2010', 10, 24, 20, 32, 18, 5, ''],
+          ['2020', 16, 22, 23, 30, 16, 9, ''],
+          ['2030', 28, 19, 29, 30, 12, 13, '']
+        ]);
+
+        var options = {
+          isStacked: 'true',
+          legend: {position: 'top', maxLines: 2},
+          width: 270
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('barchart'));
+        chart.draw(data, options);
+      }
+      
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(draw_bar_graph);
+
+      banjir = []
+      $.when(retrieve_data_banjir()).then(function (data) {
+        var column = ['Lat', 'Long', 'Name'];
+        
+        banjir.push(column);
+        $.each(data, function(i, f) {
+          row = [Number(f.latitude), Number(f.longitude), String(i)]
+          banjir.push(row)
+        });  
+        console.log(banjir)
+      });
+
+      google.charts.load('current', {
+        'packages':['map'],
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+      
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable(banjir);
+
+
+        var options = {
+          mapType: 'styledMap',
+          zoomLevel: 4,
+          showTooltip: true,
+          showInfoWindow: true,
+          useMapTypeControl: true,
+          maps: {
+            styledMap: {
+              name: 'Styled Map', // This name will be displayed in the map type control.
+              styles: [
+                {
+                 stylers: [{hue: "#e7ecf0"}, {saturation: 0}]
+                },
+                {featureType: 'poi',
+                 stylers: [{visibility: 'off'}]
+                },
+                {featureType: 'water',
+                 stylers: [{visibility: 'simplified'}, {saturation: -60}]
+                },
+                {featureType: 'transit',
+                 stylers: [{visibility: 'off'}]
+                },
+                {featureType: 'road',
+                 stylers: [{saturation: -70}]
+                }
+              ]
+            }
+          },
+          icons: {
+            default: {
+              normal: 'https://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Azure-icon.png',
+              selected: 'https://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Right-Azure-icon.png'
+            }
+          }
+        };
+
+        var chart = new google.visualization.Map(document.getElementById('map'));
+          chart.draw(data, options);
+      }
+      
     </script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUV8K_1UzWZfHDQODCCdm5Pf-dTLhDYzE&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUV8K_1UzWZfHDQODCCdm5Pf-dTLhDYzE">
     </script>
   </body>
 </html>
