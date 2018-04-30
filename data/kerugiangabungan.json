@@ -68,7 +68,7 @@
 	{
 		"provinsi": "ID-JI",
 		"banjir": 1288975880000,
-		"gempa": 4764000000",
+		"gempa": 4764000000,
 		"kebakaran": 25200000000
 	},
 	{
@@ -193,7 +193,7 @@
 	},
 	{
 		"provinsi": "ID-SU",
-		"banjir": "376558128000",
+		"banjir": 376558128000,
 		"gempa": 0,
 		"kebakaran": 0
 	}
