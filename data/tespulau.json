@@ -1,12 +1,234 @@
 [
 	{
 		"pulau": "Jawa",
-		"dataPulau": [
+		"dataProvinsi": [		
 			{
-				"provinsi": "ID-AC",
+				"provinsi": "DKI Jakarta",
+				"banjir": 601432000000,
+				"gempa": 0,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Banten",
+				"banjir": 326235700000,
+				"gempa": 0,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Jawa Barat",
+				"banjir": 864343500000,
+				"gempa": 46644000000,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Jawa Tengah",
+				"banjir": 243726500000,
+				"gempa": 0,
+				"kebakaran": 16464000000000000
+			},
+			{
+				"provinsi": "Jawa Timur",
+				"banjir": 1288975880000,
+				"gempa": 4764000000,
+				"kebakaran": 25200000000000000
+			},
+			{
+				"provinsi": "DI Yogyakarta",
+				"banjir": 24829000000,
+				"gempa": 0,
+				"kebakaran": 0
+			}
+		]
+	},
+	{
+		"pulau": "Kalimantan",
+		"dataProvinsi": [
+			{
+				"provinsi": "Kalimantan Barat",
+				"banjir": 28600000000,
+				"gempa": 0,
+				"kebakaran": 42000000054000000
+			},
+			{
+				"provinsi": "Kalimantan Tengah",
+				"banjir": 209641500000,
+				"gempa": 0,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Kalimantan Timur",
+				"banjir": 205029000000,
+				"gempa": 0,
+				"kebakaran": 310000000
+			},
+			{
+				"provinsi": "Kalimantan Utara",
+				"banjir": 4594000000,
+				"gempa": 0,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Kalimantan Selatan",
+				"banjir": 300994500000,
+				"gempa": 0,
+				"kebakaran": 8400000000000000
+			}
+		]
+	},
+	{
+		"pulau": "Maluku",
+		"dataProvinsi": [		
+			{
+				"provinsi": "Maluku",
+				"banjir": 104863000000,
+				"gempa": 44000000,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Maluku Utara",
+				"banjir": 3015000000,
+				"gempa": 0,
+				"kebakaran": 0
+			}
+		]
+	},
+	{
+		"pulau": "Nusa Tenggara",
+		"dataProvinsi": [
+			{
+				"provinsi": "Bali",
+				"banjir": 3321000000,
+				"gempa": 0,
+				"kebakaran": 17808000000000000
+			},			
+			{
+				"provinsi": "NTB",
+				"banjir": 82368756000,
+				"gempa": 148124000000,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "NTT",
+				"banjir": 28448500000,
+				"gempa": 20000000,
+				"kebakaran": 0
+			}
+		]
+	},
+	{
+		"pulau": "Papua",
+		"dataProvinsi": [		
+			{
+				"provinsi": "Papua",
+				"banjir": 48490000000,
+				"gempa": 0,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Papua Barat",
+				"banjir": 2970000000,
+				"gempa": 0,
+				"kebakaran": 0
+			}
+		]
+	},
+	{
+		"pulau": "Sulawesi",
+		"dataProvinsi": [
+			{
+				"provinsi": "Sulawesi Barat",
+				"banjir": 50482000000,
+				"gempa": 0,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Sulawesi Selatan",
+				"banjir": 209428500000,
+				"gempa": 0,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Sulawesi Tengah",
+				"banjir": 88382500000,
+				"gempa": 60414000000,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Sulawesi Tenggara",
+				"banjir": 119249275000,
+				"gempa": 0,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Sulawesi Utara",
+				"banjir": 242031000000,
+				"gempa": 0,
+				"kebakaran": 0
+			},		
+			{
+				"provinsi": "Gorontalo",
+				"banjir": 149805750000,
+				"gempa": 0,
+				"kebakaran": 0
+			}
+		]
+	},
+	{
+		"pulau": "Sumatera",
+		"dataProvinsi": [
+			{
+				"provinsi": "Aceh",
 				"banjir": 864837560000,
 				"gempa": 101544000000,
-				"kebakaran": 336000000
+				"kebakaran": 336000000000000
+			},
+			{
+				"provinsi": "Bangka Belitung",
+				"banjir": 10351000000,
+				"gempa": 0,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Bengkulu",
+				"banjir": 16349500000,
+				"gempa": 0,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Lampung",
+				"banjir": 89522000000,
+				"gempa": 0,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Riau",
+				"banjir": 44668000000,
+				"gempa": 0,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Sumatera Barat",
+				"banjir": 575040690000,
+				"gempa": 0,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Sumatera Selatan",
+				"banjir": 93712000000,
+				"gempa": 0,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Sumatera Utara",
+				"banjir": 376558128000,
+				"gempa": 0,
+				"kebakaran": 0
+			},
+			{
+				"provinsi": "Jambi",
+				"banjir": 388522900000,
+				"gempa": 0,
+				"kebakaran": 979860000000000000
 			}
 		]
 	}
