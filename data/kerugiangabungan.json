@@ -1,0 +1,199 @@
+﻿[
+	{
+		"provinsi": "ID-AC",
+		"banjir": "864837560000",
+		"gempa": "101544000000",
+		"kebakaran": "336000000"
+	},
+	{
+		"provinsi": "ID-BA",
+		"banjir": "3321000000",
+		"gempa": "",
+		"kebakaran": "17808000000"
+	},
+	{
+		"provinsi": "ID-BB",
+		"banjir": "10351000000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-BT",
+		"banjir": "326235700000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-BE",
+		"banjir": "16349500000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-YO",
+		"banjir": "24829000000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-JK",
+		"banjir": "601432000000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-GO",
+		"banjir": "149805750000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-JA",
+		"banjir": "388522900000",
+		"gempa": "",
+		"kebakaran": "979860000000"
+	},
+	{
+		"provinsi": "ID-JB",
+		"banjir": "864343500000",
+		"gempa": "46644000000",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-JT",
+		"banjir": "243726500000",
+		"gempa": "",
+		"kebakaran": "16464000000"
+	},
+	{
+		"provinsi": "ID-JI",
+		"banjir": "1288975880000",
+		"gempa": "4764000000",
+		"kebakaran": "25200000000"
+	},
+	{
+		"provinsi": "ID-KB",
+		"banjir": "28600000000",
+		"gempa": "",
+		"kebakaran": "42000000054"
+	},
+	{
+		"provinsi": "ID-KT",
+		"banjir": "209641500000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-KI",
+		"banjir": "205029000000",
+		"gempa": "",
+		"kebakaran": "310"
+	},
+	{
+		"provinsi": "ID-KU",
+		"banjir": "4594000000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-KS",
+		"banjir": "300994500000",
+		"gempa": "",
+		"kebakaran": "8400000000"
+	},
+	{
+		"provinsi": "ID-LA",
+		"banjir": "89522000000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-MA",
+		"banjir": "104863000000",
+		"gempa": "44000000",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-MU",
+		"banjir": "3015000000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-NB",
+		"banjir": "82368756000",
+		"gempa": "148124000000",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-NT",
+		"banjir": "28448500000",
+		"gempa": "20000000",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-PA",
+		"banjir": "48490000000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-PB",
+		"banjir": "2970000000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-RI",
+		"banjir": "44668000000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-SR",
+		"banjir": "50482000000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-SN",
+		"banjir": "209428500000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-ST",
+		"banjir": "88382500000",
+		"gempa": "60414000000",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-SG",
+		"banjir": "119249275000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-SA",
+		"banjir": "242031000000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-SB",
+		"banjir": "575040690000",
+		"gempa": "",
+		"kebakaran": ""
+	},
+	{
+		"provinsi": "ID-SS",
+		"banjir": "93712000000"
+	},
+	{
+		"provinsi": "ID-SU",
+		"banjir": "376558128000"
+	},
+	{
+		"provinsi": ""
+	}
+]
