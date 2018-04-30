@@ -1,11 +1,13 @@
 [
 	{
 		"pulau": "Jawa",
-		"dataPulau": [		
-			"provinsi": "ID-AC",
-			"banjir": 864837560000,
-			"gempa": 101544000000,
-			"kebakaran": 336000000
+		"dataPulau": [
+			{
+				"provinsi": "ID-AC",
+				"banjir": 864837560000,
+				"gempa": 101544000000,
+				"kebakaran": 336000000
+			}
 		]
 	}
 ]
