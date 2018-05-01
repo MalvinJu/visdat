@@ -3,31 +3,58 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
      <script type="text/javascript">
 
-    function test() {
+    function retrieveBanjir() {
      return $.getJSON('https://raw.githubusercontent.com/MalvinJu/visdat/master/data/banjir.json');
     }
+    
+    function retrieveGempa() {
+     return $.getJSON('https://raw.githubusercontent.com/MalvinJu/visdat/master/data/gempa-bersih.json');
+    }
 
+    function retrieveKebakaran() {
+     return $.getJSON('https://raw.githubusercontent.com/MalvinJu/visdat/master/data/kebakaran.json');
+    }
  
 
-    $.when(test()).then(function (data) {
-      var arrayData = [];
-      var label = [ {label: 'LATITUDE', id: 'Latitude', type: 'number'},
-                     {label: 'LONGITUDE', id: 'Longitude', type: 'number'}, // Use object notation to explicitly specify the data type.
-                     {label: 'DESCRIPTION', id: 'Description', type: 'string'},
-                     {label: 'VALUE', id: 'value', type: 'number'}];
+    var arrayData = [];
+    var label = [ {label: 'LATITUDE', id: 'Latitude', type: 'number'},
+                   {label: 'LONGITUDE', id: 'Longitude', type: 'number'}, // Use object notation to explicitly specify the data type.
+                   {label: 'DESCRIPTION', id: 'Description', type: 'string'},
+                   {label: 'VALUE', id: 'value', type: 'number'}];
+    arrayData.push(label);
 
-      arrayData.push(label);
-        google.charts.load('current', {
-          'packages':['geochart'],
-          'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
-      });
-      google.charts.setOnLoadCallback(drawRegionsMap);
-
-      $.each(data, function(i, f) {   
-        x = [f.latitude, f.longitude, 'hai', 1]
+    //banjir
+    $.when(retrieveBanjir()).then(function (dataBanjir) {
+      $.each(dataBanjir, function(i, f) {   
+        x = [f.latitude, f.longitude, 'Banjir', 1]
         arrayData.push(x)
       });
-      
+    });
+    
+    //gempa
+    $.when(retrieveGempa()).then(function (dataGempa) {
+      $.each(dataGempa, function(i, f) {   
+        x = [f.latitude, f.longitude, 'Gempa bumi', 1]
+        arrayData.push(x)
+      });
+    });
+
+    //kebakaran
+    $.when(retrieveKebakaran()).then(function (dataKebakaran) {
+      $.each(dataKebakaran, function(i, f) {   
+        x = [f.latitude, f.longitude, 'Kebakaran hutan', 1]
+        arrayData.push(x)
+      });
+    });
+
+    console.log(arrayData);
+
+    google.charts.load('current', {
+        'packages':['geochart'],
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+    });
+    google.charts.setOnLoadCallback(drawRegionsMap);
+
       function drawRegionsMap() {
         var x = google.visualization.arrayToDataTable(arrayData);
 
@@ -35,15 +62,16 @@
           region: 'ID',
           displayMode: 'markers',
            sizeAxis: { minValue: -2, maxValue: 5, minSize: 1, maxSize: 5},
-           legend: 'none'
+           legend: 'none',
+           colorAxis: {colors: ['#808080']}
         };
 
         var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
           chart.draw(x, options);
-      }
-    });
+      };
+
   </script>
-  
+
   <head>
   </head>
   <body>
