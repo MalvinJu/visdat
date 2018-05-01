@@ -1,6 +1,5 @@
 body {
   font-size: .875rem;
-  transition: background-color .5s;
 }
 
 .feather {
@@ -156,8 +155,17 @@ body {
     margin-left: 50px;
 }
 
-#main-side-menu {
-    transition: margin-left .5s;
+.sidenav .sidenav-text {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    padding-top: 15px;
+    font-size: 36px;
+    margin-left: 0px;
+}
+
+#main {
+    transition: margin-right .5s;
 }
 
 @media screen and (max-height: 450px) {
@@ -165,7 +173,40 @@ body {
   .sidenav a {font-size: 18px;}
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #ffffff;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
 }
