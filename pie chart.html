@@ -1,0 +1,160 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <script type="text/javascript">
+
+      function test() {
+        return $.getJSON('https://raw.githubusercontent.com/MalvinJu/visdat/master/data/tespulau.json');
+      }
+      //ganti pulau:  ubah line google.charts.setOnLoadCallback(function() {drawChart(...<nama array pulau>, <nama Pulau> ); });
+      var arrayJawa = [];
+      var arrayKalimantan = [];
+      var arrayMaluku = [];
+      var arrayNT = [];
+      var arrayPapua = [];
+      var arraySulawesi = [];
+      var arraySumatera = [];
+
+      var namaProvinsi, nBanjir, nGempa, nKebakaran;
+      var label = ['Jenis Bencana', 'Jumlah Kejadian'];
+      arrayJawa.push(label);
+      arrayKalimantan.push(label);
+      arrayMaluku.push(label);
+      arrayNT.push(label);
+      arrayPapua.push(label);
+      arraySulawesi.push(label);
+      arraySumatera.push(label);
+
+
+      $.when(test()).then(function (data) {
+        $.each(data, function(i, f) {
+          if(data != undefined && f.dataProvinsi != undefined){
+            nBanjir = 0;
+            nGempa = 0;
+            nKebakaran = 0;
+            switch(f.pulau){
+              case 'Jawa':
+                $.each(f.dataProvinsi, function (j,perPulau){
+                  nBanjir += parseFloat(perPulau.nBanjir)
+                  nGempa += parseFloat(perPulau.nGempa)
+                  nKebakaran += parseFloat(perPulau.nKebakaran)
+                })
+                xBanjir = ['Banjir', nBanjir ]
+                xGempa = ['Gempa', nGempa]
+                xKebakaran = ['Kebakaran', nKebakaran]
+                arrayJawa.push(xBanjir, xGempa, xKebakaran);
+                break;
+              case 'Kalimantan':
+                $.each(f.dataProvinsi, function (j,perPulau){
+                  nBanjir += parseFloat(perPulau.nBanjir)
+                  nGempa += parseFloat(perPulau.nGempa)
+                  nKebakaran += parseFloat(perPulau.nKebakaran)
+                })
+                xBanjir = ['Banjir', nBanjir ]
+                xGempa = ['Gempa', nGempa]
+                xKebakaran = ['Kebakaran', nKebakaran]
+                arrayKalimantan.push(xBanjir, xGempa, xKebakaran);
+                break;
+              case 'Maluku':
+                $.each(f.dataProvinsi, function (j,perPulau){
+                  nBanjir += parseFloat(perPulau.nBanjir)
+                  nGempa += parseFloat(perPulau.nGempa)
+                  nKebakaran += parseFloat(perPulau.nKebakaran)
+                })
+                xBanjir = ['Banjir', nBanjir ]
+                xGempa = ['Gempa', nGempa]
+                xKebakaran = ['Kebakaran', nKebakaran]
+                arrayMaluku.push(xBanjir, xGempa, xKebakaran);
+                break;
+              case 'Nusa Tenggara':
+                $.each(f.dataProvinsi, function (j,perPulau){
+                  nBanjir += parseFloat(perPulau.nBanjir)
+                  nGempa += parseFloat(perPulau.nGempa)
+                  nKebakaran += parseFloat(perPulau.nKebakaran)
+                })
+                xBanjir = ['Banjir', nBanjir ]
+                xGempa = ['Gempa', nGempa]
+                xKebakaran = ['Kebakaran', nKebakaran]
+                arrayNT.push(xBanjir, xGempa, xKebakaran);
+                break;
+              case 'Papua':
+                $.each(f.dataProvinsi, function (j,perPulau){
+                  nBanjir += parseFloat(perPulau.nBanjir)
+                  nGempa += parseFloat(perPulau.nGempa)
+                  nKebakaran += parseFloat(perPulau.nKebakaran)
+                })
+                xBanjir = ['Banjir', nBanjir ]
+                xGempa = ['Gempa', nGempa]
+                xKebakaran = ['Kebakaran', nKebakaran]
+                arrayPapua.push(xBanjir, xGempa, xKebakaran);
+                break;
+              case 'Sulawesi':
+                $.each(f.dataProvinsi, function (j,perPulau){
+                  nBanjir += parseFloat(perPulau.nBanjir)
+                  nGempa += parseFloat(perPulau.nGempa)
+                  nKebakaran += parseFloat(perPulau.nKebakaran)
+                })
+                xBanjir = ['Banjir', nBanjir ]
+                xGempa = ['Gempa', nGempa]
+                xKebakaran = ['Kebakaran', nKebakaran]
+                arraySulawesi.push(xBanjir, xGempa, xKebakaran);
+                break;
+              case 'Sumatera':
+                $.each(f.dataProvinsi, function (j,perPulau){
+                  nBanjir += parseFloat(perPulau.nBanjir)
+                  nGempa += parseFloat(perPulau.nGempa)
+                  nKebakaran += parseFloat(perPulau.nKebakaran)
+                })
+                xBanjir = ['Banjir', nBanjir ]
+                xGempa = ['Gempa', nGempa]
+                xKebakaran = ['Kebakaran', nKebakaran]
+                arraySumatera.push(xBanjir, xGempa, xKebakaran);
+                break;
+            }
+          }
+        });
+      });
+
+      //DRAW CHART
+      google.charts.load('current', {
+        'packages':['corechart'],
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+
+      //====GANTI PULAU=====
+      google.charts.setOnLoadCallback(function() {drawChart(arrayJawa, 'Jawa'); });
+      // google.charts.setOnLoadCallback(function() {drawChart(arrayKalimantan, 'Kalimantan'); });
+      // google.charts.setOnLoadCallback(function() {drawChart(arrayMaluku, 'Maluku'); });
+      // google.charts.setOnLoadCallback(function() {drawChart(arrayNT, 'NT'); });
+      // google.charts.setOnLoadCallback(function() {drawChart(arrayPapua, 'Papua'); });
+      // google.charts.setOnLoadCallback(function() {drawChart(arraySulawesi, 'Sulawesi'); });
+      // google.charts.setOnLoadCallback(function() {drawChart(arraySumatera, 'Sumatera'); });
+
+
+      function drawChart(array,name) {
+       var data = google.visualization.arrayToDataTable(array);
+
+       namaProvinsi = 'Pulau '+name;
+       if(name == 'NT'){
+        namaProvinsi = 'Pulau Bali dan Nusa Tenggara ';
+       }
+      var options = {
+        title: namaProvinsi,
+        colors:['#384ba0','#b25728','#f3b31e']
+      };
+     var chart = new google.visualization.PieChart(document.getElementById('piechart_'+name));
+      chart.draw(data, options);
+  }
+  </script>
+<div id="piechart_Jawa" style="width: 900px; height: 300px;"></div>
+<div id="piechart_Kalimantan" style="width: 900px; height: 300px;"></div>
+<div id="piechart_Maluku" style="width: 900px; height: 300px;"></div>
+<div id="piechart_NT" style="width: 900px; height: 300px;"></div>
+<div id="piechart_Papua" style="width: 900px; height: 300px;"></div>
+<div id="piechart_Sulawesi" style="width: 900px; height: 300px;"></div>
+<div id="piechart_Sumatera" style="width: 900px; height: 300px;"></div>
+  </head>
+  <body>
+  </body>
+</html>
