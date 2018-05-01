@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <script type="text/javascript">
+
+      function test() {
+        return $.getJSON('https://raw.githubusercontent.com/MalvinJu/visdat/master/data/kerugiangabungan.json');
+      }
+
+      var arrayData = [];
+      var label = ['Provinsi', 'Banjir', 'Gempa Bumi', 'Kebakaran Hutan'];
+      arrayData.push(label);
+
+      $.when(test()).then(function (data) {
+        alert(data);
+        $.each(data, function(i, f) {
+            x = [f.provinsi, parseFloat(f.banjir), parseFloat(f.gempa), parseFloat(f.kebakaran)]
+             arrayData.push(x)
+      });
+        console.log(arrayData);
+      });
+      // var x = ['ID-AC',10,12,13];
+      // arrayData.push(x);
+
+      // x = ['ID-BC',11,13,14];
+      // arrayData.push(x);
+      // console.log(arrayData);
+
+      google.charts.load('current', {
+        'packages':['corechart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+       var data = google.visualization.arrayToDataTable(arrayData);
+
+      var options = {
+        width: 600,
+        height: 400,
+        legend: { position: 'top', maxLines: 3 },
+        bar: { groupWidth: '75%' },
+        isStacked: true,
+        colors:['#11AA77','#999922','#550077']//settingcolor
+      };
+     var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+      chart.draw(data, options);
+  }
+  </script>
+<div id="barchart_values" style="width: 900px; height: 300px;"></div>
+  </head>
+  <body>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
