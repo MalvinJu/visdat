@@ -7,24 +7,24 @@
       function test() {
         return $.getJSON('https://raw.githubusercontent.com/MalvinJu/visdat/master/data/tespulau.json');
       }
-      //ganti pulau:  ubah line google.charts.setOnLoadCallback(function() {drawChart(...<nama array pulau>, <nama Pulau> ); });
-      var arrayJawa = [];
-      var arrayKalimantan = [];
-      var arrayMaluku = [];
-      var arrayNT = [];
-      var arrayPapua = [];
-      var arraySulawesi = [];
-      var arraySumatera = [];
+      //ganti pulau:  ubah line google.charts.setOnLoadCallback(function() {drawChart(...<nama arrayPie pulau>, <nama Pulau> ); });
+      var arrayPieJawa = [];
+      var arrayPieKalimantan = [];
+      var arrayPieMaluku = [];
+      var arrayPieNT = [];
+      var arrayPiePapua = [];
+      var arrayPieSulawesi = [];
+      var arrayPieSumatera = [];
 
       var namaProvinsi, nBanjir, nGempa, nKebakaran;
       var label = ['Jenis Bencana', 'Jumlah Kejadian'];
-      arrayJawa.push(label);
-      arrayKalimantan.push(label);
-      arrayMaluku.push(label);
-      arrayNT.push(label);
-      arrayPapua.push(label);
-      arraySulawesi.push(label);
-      arraySumatera.push(label);
+      arrayPieJawa.push(label);
+      arrayPieKalimantan.push(label);
+      arrayPieMaluku.push(label);
+      arrayPieNT.push(label);
+      arrayPiePapua.push(label);
+      arrayPieSulawesi.push(label);
+      arrayPieSumatera.push(label);
 
 
       $.when(test()).then(function (data) {
@@ -43,7 +43,7 @@
                 xBanjir = ['Banjir', nBanjir ]
                 xGempa = ['Gempa', nGempa]
                 xKebakaran = ['Kebakaran', nKebakaran]
-                arrayJawa.push(xBanjir, xGempa, xKebakaran);
+                arrayPieJawa.push(xBanjir, xGempa, xKebakaran);
                 break;
               case 'Kalimantan':
                 $.each(f.dataProvinsi, function (j,perPulau){
@@ -54,7 +54,7 @@
                 xBanjir = ['Banjir', nBanjir ]
                 xGempa = ['Gempa', nGempa]
                 xKebakaran = ['Kebakaran', nKebakaran]
-                arrayKalimantan.push(xBanjir, xGempa, xKebakaran);
+                arrayPieKalimantan.push(xBanjir, xGempa, xKebakaran);
                 break;
               case 'Maluku':
                 $.each(f.dataProvinsi, function (j,perPulau){
@@ -65,7 +65,7 @@
                 xBanjir = ['Banjir', nBanjir ]
                 xGempa = ['Gempa', nGempa]
                 xKebakaran = ['Kebakaran', nKebakaran]
-                arrayMaluku.push(xBanjir, xGempa, xKebakaran);
+                arrayPieMaluku.push(xBanjir, xGempa, xKebakaran);
                 break;
               case 'Nusa Tenggara':
                 $.each(f.dataProvinsi, function (j,perPulau){
@@ -76,7 +76,7 @@
                 xBanjir = ['Banjir', nBanjir ]
                 xGempa = ['Gempa', nGempa]
                 xKebakaran = ['Kebakaran', nKebakaran]
-                arrayNT.push(xBanjir, xGempa, xKebakaran);
+                arrayPieNT.push(xBanjir, xGempa, xKebakaran);
                 break;
               case 'Papua':
                 $.each(f.dataProvinsi, function (j,perPulau){
@@ -87,7 +87,7 @@
                 xBanjir = ['Banjir', nBanjir ]
                 xGempa = ['Gempa', nGempa]
                 xKebakaran = ['Kebakaran', nKebakaran]
-                arrayPapua.push(xBanjir, xGempa, xKebakaran);
+                arrayPiePapua.push(xBanjir, xGempa, xKebakaran);
                 break;
               case 'Sulawesi':
                 $.each(f.dataProvinsi, function (j,perPulau){
@@ -98,7 +98,7 @@
                 xBanjir = ['Banjir', nBanjir ]
                 xGempa = ['Gempa', nGempa]
                 xKebakaran = ['Kebakaran', nKebakaran]
-                arraySulawesi.push(xBanjir, xGempa, xKebakaran);
+                arrayPieSulawesi.push(xBanjir, xGempa, xKebakaran);
                 break;
               case 'Sumatera':
                 $.each(f.dataProvinsi, function (j,perPulau){
@@ -109,7 +109,7 @@
                 xBanjir = ['Banjir', nBanjir ]
                 xGempa = ['Gempa', nGempa]
                 xKebakaran = ['Kebakaran', nKebakaran]
-                arraySumatera.push(xBanjir, xGempa, xKebakaran);
+                arrayPieSumatera.push(xBanjir, xGempa, xKebakaran);
                 break;
             }
           }
@@ -123,17 +123,17 @@
       });
 
       //====GANTI PULAU=====
-      google.charts.setOnLoadCallback(function() {drawChart(arrayJawa, 'Jawa'); });
-      // google.charts.setOnLoadCallback(function() {drawChart(arrayKalimantan, 'Kalimantan'); });
-      // google.charts.setOnLoadCallback(function() {drawChart(arrayMaluku, 'Maluku'); });
-      // google.charts.setOnLoadCallback(function() {drawChart(arrayNT, 'NT'); });
-      // google.charts.setOnLoadCallback(function() {drawChart(arrayPapua, 'Papua'); });
-      // google.charts.setOnLoadCallback(function() {drawChart(arraySulawesi, 'Sulawesi'); });
-      // google.charts.setOnLoadCallback(function() {drawChart(arraySumatera, 'Sumatera'); });
+      google.charts.setOnLoadCallback(function() {drawChart(arrayPieJawa, 'Jawa'); });
+      // google.charts.setOnLoadCallback(function() {drawChart(arrayPieKalimantan, 'Kalimantan'); });
+      // google.charts.setOnLoadCallback(function() {drawChart(arrayPieMaluku, 'Maluku'); });
+      // google.charts.setOnLoadCallback(function() {drawChart(arrayPieNT, 'NT'); });
+      // google.charts.setOnLoadCallback(function() {drawChart(arrayPiePapua, 'Papua'); });
+      // google.charts.setOnLoadCallback(function() {drawChart(arrayPieSulawesi, 'Sulawesi'); });
+      // google.charts.setOnLoadCallback(function() {drawChart(arrayPieSumatera, 'Sumatera'); });
 
 
       function drawChart(array,name) {
-       var data = google.visualization.arrayToDataTable(array);
+       var data = google.visualization.arrayPieToDataTable(array);
 
        namaProvinsi = 'Pulau '+name;
        if(name == 'NT'){

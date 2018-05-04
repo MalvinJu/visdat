@@ -72,49 +72,49 @@
                   arraySumatera.push(y);
                 })
                 break;
+              }
             }
-          }
+          });
         });
-      });
 
-      //DRAW CHART
-      google.charts.load('current', {
-        'packages':['corechart'],
-        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
-      });
+        //DRAW CHART
+        google.charts.load('current', {
+          'packages':['corechart'],
+          'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+        });
 
-      //====GANTI PULAU=====
-      google.charts.setOnLoadCallback(function() {drawChart(arrayJawa, 'Jawa'); });
-      // google.charts.setOnLoadCallback(function() {drawChart(arrayKalimantan, 'Kalimantan'); });
-      // google.charts.setOnLoadCallback(function() {drawChart(arrayMaluku, 'Maluku'); });
-      // google.charts.setOnLoadCallback(function() {drawChart(arrayNT, 'NT'); });
-      // google.charts.setOnLoadCallback(function() {drawChart(arrayPapua, 'Papua'); });
-      // google.charts.setOnLoadCallback(function() {drawChart(arraySulawesi, 'Sulawesi'); });
-      // google.charts.setOnLoadCallback(function() {drawChart(arraySumatera, 'Sumatera'); });
+        //====GANTI PULAU=====
+        google.charts.setOnLoadCallback(function() {drawChart(arrayJawa, 'Jawa'); });
+        // google.charts.setOnLoadCallback(function() {drawChart(arrayKalimantan, 'Kalimantan'); });
+        // google.charts.setOnLoadCallback(function() {drawChart(arrayMaluku, 'Maluku'); });
+        // google.charts.setOnLoadCallback(function() {drawChart(arrayNT, 'NT'); });
+        // google.charts.setOnLoadCallback(function() {drawChart(arrayPapua, 'Papua'); });
+        // google.charts.setOnLoadCallback(function() {drawChart(arraySulawesi, 'Sulawesi'); });
+        // google.charts.setOnLoadCallback(function() {drawChart(arraySumatera, 'Sumatera'); });
 
 
-      function drawChart(array, name) {
-       var data = google.visualization.arrayToDataTable(array);
+        function drawChart(array, name) {
+         var data = google.visualization.arrayToDataTable(array);
 
-      var options = {
-        width: 600,
-        height: 400,
-        legend: { position: 'top', maxLines: 3 },
-        bar: { groupWidth: '75%' },
-        isStacked: 'percent',
-        colors:['#384ba0','#b25728','#f3b31e']//settingcolor
-      };
-     var chart = new google.visualization.BarChart(document.getElementById('barchart_' +name));
-      chart.draw(data, options);
-  }
-  </script>
-<div id="barchart_Jawa" style="width: 900px; height: 400px;"></div>
-<div id="barchart_Kalimantan" style="width: 900px; height: 400px;"></div>
-<div id="barchart_Maluku" style="width: 900px; height: 400px;"></div>
-<div id="barchart_NT" style="width: 900px; height: 400px;"></div>
-<div id="barchart_Papua" style="width: 900px; height: 400px;"></div>
-<div id="barchart_Sulawesi" style="width: 900px; height: 400px;"></div>
-<div id="barchart_Sumatera" style="width: 900px; height: 400px;"></div>
+        var options = {
+          width: 600,
+          height: 400,
+          legend: { position: 'top', maxLines: 3 },
+          bar: { groupWidth: '75%' },
+          isStacked: 'percent',
+          colors:['#384ba0','#b25728','#f3b31e']//settingcolor
+        };
+       var chart = new google.visualization.BarChart(document.getElementById('barchart_' +name));
+        chart.draw(data, options);
+    }
+    </script>
+    <div id="barchart_Jawa" style="width: 900px; height: 400px;"></div>
+    <div id="barchart_Kalimantan" style="width: 900px; height: 400px;"></div>
+    <div id="barchart_Maluku" style="width: 900px; height: 400px;"></div>
+    <div id="barchart_NT" style="width: 900px; height: 400px;"></div>
+    <div id="barchart_Papua" style="width: 900px; height: 400px;"></div>
+    <div id="barchart_Sulawesi" style="width: 900px; height: 400px;"></div>
+    <div id="barchart_Sumatera" style="width: 900px; height: 400px;"></div>
   </head>
   <body>
   </body>

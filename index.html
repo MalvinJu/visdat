@@ -1,350 +1,194 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="favicon.ico">
 
-    <title>Bencana Alam</title>
+		<title>Bencana Alam</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Custom styles for this template -->
-    <link href="css/dashboard.css" rel="stylesheet">
-     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 70%;
-      }
-      .mh1 div{
-        height: 70vh; /* 30% of viewport height*/
-      }
-    </style>
-  </head>
+		<link href="css/dashboard.css" rel="stylesheet">
+		<style>
+			#map {
+				height: 100%;
+			}
+			.mh1 div{
+				position: relative;
+				overflow: hidden;
+			}
+		</style>
+	</head>
 
-  <body>
-    <div id="mySidenav" class="sidenav text-light">
-      <h3 class="pl-3">Filter</h3>
-      <hr class="bg-light pb-0 ml-3 mr-3"></hr>
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <form class = "pl-3 pr-3 pt-2">
-        <div class="form-group">
-          <label for="exampleFormControlInput1" class="font-weight-bold">Tahun</label>
-          <div class = "row">
-            <div class="col-md-5 p-0 pl-3">
-              <select class="form-control form-control-sm">
-                <option>2011</option>
-                <option>2012</option>
-                <option>2013</option>
-                <option>2014</option>
-              </select>
-            </div>
-            <div class="col-md-2 p-0 pl-3">
-              to
-            </div>
-            <div class="col-md-5 p-0 pr-3">
-              <select class="form-control form-control-sm">
-                <option>2011</option>
-                <option>2012</option>
-                <option>2013</option>
-                <option>2014</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="form-group pt-1">
-          <label for="exampleFormControlSelect1" class="font-weight-bold">Jenis Bencana</label>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="jenisbencana">
-            <label class="form-check-label" for="banjir">
-              Banjir
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="jenisbencana">
-            <label class="form-check-label" for="kebakaran">
-              Kebakaran
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="jenisbencana">
-            <label class="form-check-label" for="gempabumi">
-              Gempa Bumi
-            </label>
-          </div>
-        </div>
-        <div class="form-group pt-1">
-          <label for="exampleFormControlSelect2" class="font-weight-bold">Pulau</label>
-          <select class="form-control form-control-sm">
-            <option>Jawa</option>
-            <option>Kalimantan</option>
-            <option>Maluku</option>
-            <option>Sulawesi</option>
-            <option>Sumatera</option>
-            <option>Papua</option>
-          </select>
-        </div>
-        <div class="form-group pt-1">
-          <label for="exampleFormControlTextarea1" class="font-weight-bold">Kerugian</label>
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        </div>
-      </form>
-    </div>
+	<body>
+		<div id="mySidenav" class="sidenav text-light">
+			<h4 class="pl-3">Filter</h4>
+			<hr class="bg-light pb-0 ml-3 mr-3"></hr>
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<form class = "pl-3 pr-3 pt-2">
+				<div class="form-group">
+					<label for="YearToYear" class="font-weight-bold">Tahun</label>
+					<div class = "row">
+						<div class="col-md-4 p-0 pl-3">
+							<select class="form-control form-control-sm">
+								<option selected>2011</option>
+								<option>2012</option>
+								<option>2013</option>
+								<option>2014</option>
+							</select>
+						</div>
+						<div class="col-md-4 p-0 pl-3">
+							sampai
+						</div>
+						<div class="col-md-4 p-0 pr-3">
+							<select class="form-control form-control-sm">
+								<option>2011</option>
+								<option>2012</option>
+								<option>2013</option>
+								<option selected>2014</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="form-group pt-1" id="disasterType">
+					<label for="disasterType" class="font-weight-bold">Jenis Bencana</label>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="banjir" name="banjir" checked>
+						<label class="form-check-label" for="banjir">
+							Banjir
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="gempabumi" name="gempabumi" checked>
+						<label class="form-check-label" for="gempabumi">
+							Gempa Bumi
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="kebakaran" name="kebakaran" checked>
+						<label class="form-check-label" for="kebakaran">
+							Kebakaran Hutan
+						</label>
+					</div>
+					
+				</div>
+				<div class="form-group pt-1">
+					<label for="Island" class="font-weight-bold">Pulau</label>
+					<select id="selectPulau" class="form-control form-control-sm">
+						<option selected>Semua Pulau</option>
+						<option>Sumatera</option>
+						<option>Jawa</option>
+						<option>Kalimantan</option>
+						<option>Sulawesi</option>
+						<option>Nusa Tenggara</option>
+						<option>Papua</option>
+					</select>
+				</div>
+				<div class="form-group pt-1">
+					<label for="Loss" class="font-weight-bold">Kerugian</label>
+					<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+				</div>
+			</form>
+		</div>
 
-    <!-- <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Disaster</a>
-    </nav> -->
-    <div id="main">
-    <div class="container-fluid bg-light">
-      <div class="row">
-        <main role="main" class="col-md-12 ml-sm-12 col-lg-12 pt-0 px-4">
-          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Persebaran Bencana di Indonesia</h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
-              <div class="btn-group mr-2">
-                <h1 class="lead pr-2 pt-2" style="font-size: 17px;">Year: </h1>
-                <div class="dropdown">
-                  <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span data-feather="calendar"></span>
-                    All
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </div>
-                <h1 class="lead pl-4 pt-2 pl-1" style="font-size: 17px;cursor:pointer" onclick="openNav()"><i class="fa">&#xf0b0;</i> Filter</h1>
-              </div>
-            </div>
-          </div>
+		<div id="main">
+			<div class="container-fluid bg-light">
+				<div class="row">
+					<main role="main" class="col-md-12 ml-sm-12 col-lg-12 pt-0 px-4">
+						<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+							<h1 class="h2">Persebaran Bencana di Indonesia</h1>
+							<div class="btn-toolbar mb-2 mb-md-0">
+								<div class="btn-group mr-2">
+									<h1 class="lead pl-4 pt-2 pl-1" style="font-size: 17px;cursor:pointer" onclick="openNav()"><i class="fa">&#xf0b0;</i> Filter</h1>
+								</div>
+							</div>
+						</div>
 
-          <div class="row mb-3">
-            <div class="col-md-4">
-              <div class="card flex-md-row box-shadow h-md-250">
-                <div class="card-body d-flex flex-column align-items-start pt-2 pb-2">
-                  <strong class="d-inline-block mb-2 text-primary">Jumlah Bencana</strong>
-                  <h3 class="mb-0">
-                    1200
-                  </h3>
-                  <!-- <div class="mb-1 text-muted">Nov 12</div> -->
-                </div>
-              </div>
-            </div>
+						<div class="row mb-3">
+							<div class="col-md-4">
+								<div class="card flex-md-row box-shadow h-md-250">
+									<div class="card-body d-flex flex-column align-items-start pt-2 pb-2">
+										<strong class="d-inline-block mb-2 text-primary">Jumlah Bencana</strong>
+										<h3 class="mb-0" id="jumlah_bencana"></h3>
+									</div>
+								</div>
+							</div>
 
-            <div class="col-md-4">
-              <div class="card flex-md-row box-shadow h-md-250">
-                <div class="card-body d-flex flex-column align-items-start pt-2 pb-2">
-                  <strong class="d-inline-block mb-2 text-primary">Kerugian</strong>
-                  <h3 class="mb-0">
-                    1200
-                  </h3>
-                </div>
-              </div>
-            </div>
+							<div class="col-md-4">
+								<div class="card flex-md-row box-shadow h-md-250">
+									<div class="card-body d-flex flex-column align-items-start pt-2 pb-2">
+										<strong class="d-inline-block mb-2 text-primary">Kerugian</strong>
+										<h3 class="mb-0" id="kerugian"></h3>
+									</div>
+								</div>
+							</div>
 
-            <div class="col-md-4">
-              <div class="card flex-md-row box-shadow h-md-250">
-                <div class="card-body d-flex flex-column align-items-start pt-2 pb-2">
-                  <strong class="d-inline-block mb-2 text-primary">Rumah Rusak</strong>
-                  <h3 class="mb-0">
-                    1200
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </main>
+							<div class="col-md-4">
+								<div class="card flex-md-row box-shadow h-md-250">
+									<div class="card-body d-flex flex-column align-items-start pt-2 pb-2">
+										<strong class="d-inline-block mb-2 text-primary">Rumah Rusak</strong>
+										<h3 class="mb-0" id="rumah_rusak"></h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</main>
 
-        <main class="col-md-12 ml-sm-12 col-lg-12 px-4">
-          <div class="row row-eq-height">
-            <div class="col-md-9">
-              <div class="card flex-md-row box-shadow h-md-250 map-height">
-                  <div class="my-0 w-100" style="position: relative; height: 460px; overflow: hidden;" id="map"></div>
-              </div>
-            </div>
-            
-            <div class="col-md-3">
-              <div class="row">
-                <div class="col-md-12 pb-2">
-                  <div class="card flex-md-row box-shadow h-md-250 graph-height">
-                    <div class="card-body d-flex flex-column align-items-start pt-2 pb-2">
-                      <strong class="d-inline-block mb-2 text-primary">Kerugian</strong>
-                      <div id="barchart" style="weight:100%; height: 100%;"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-12 pt-2">
-                  <div class="card flex-md-row box-shadow h-md-250 graph-height">
-                    <div class="card-body d-flex flex-column align-items-start pt-2 pb-2">
-                      <strong class="d-inline-block mb-2 text-primary">Frekuensi Kejadian</strong>
-                      <h3 class="mb-0">
-                        1200
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </main>
-      </div>
-    </div>
-    </div>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+					<main class="col-md-12 ml-sm-12 col-lg-12 px-4">
+					<div class="row row-eq-height">
+						<div class="col-md-9">
+							<div class="card flex-md-row box-shadow h-md-250 map-height">
+								<div class="my-0 w-100 mh1" id="map"></div>
+							</div>
+						</div>
+						
+						<div class="col-md-3">
+							<div class="row">
+								<div class="col-md-12 pb-2">
+									<div class="card flex-md-row box-shadow h-md-250 graph-height">
+										<div class="card-body d-flex flex-column align-items-start pt-2 pb-2">
+											<strong class="d-inline-block mb-2 text-primary">Kerugian</strong>                        
+											<div id="barchart"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 pt-2">
+									<div class="card flex-md-row box-shadow h-md-250 graph-height">
+										<div class="card-body d-flex flex-column align-items-start pt-2 pb-2">
+											<strong class="d-inline-block mb-2 text-primary">Frekuensi Kejadian</strong>
+											<div id="piechart"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+					</main>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
 
-    <!-- Icons -->
-    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-    <script>
-      feather.replace()
-    </script>
+	<!-- Icons -->
+	<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+	<script>
+		feather.replace()
+	</script>
 
-    <!-- Graphs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-    <script>
-      var ctx = document.getElementById("myChart");
-      var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          datasets: [{
-            data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
-            lineTension: 0,
-            backgroundColor: 'transparent',
-            borderColor: '#007bff',
-            borderWidth: 4,
-            pointBackgroundColor: '#007bff'
-          }]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: false
-              }
-            }]
-          },
-          legend: {
-            display: false,
-          }
-        }
-      });
-    </script>
-    
-    <script>
-      function openNav() {
-          document.getElementById("mySidenav").style.width = "300px";
-          document.getElementById("main").style.marginRight = "300px";
-          document.body.style.backgroundColor = "#f8f9fa";
-      }
+	<!-- Graphs -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 
-      function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-          document.getElementById("main").style.marginRight= "0";
-          document.body.style.backgroundColor = "white";
-      }
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUV8K_1UzWZfHDQODCCdm5Pf-dTLhDYzE"></script>
 
-      function retrieve_data_banjir() {
-        return $.getJSON('https://raw.githubusercontent.com/MalvinJu/visdat/master/data/banjir.json');
-      }
-
-      function draw_bar_graph() {
-        var data = google.visualization.arrayToDataTable([
-          ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
-           'Western', 'Literature', { role: 'annotation' } ],
-          ['2010', 10, 24, 20, 32, 18, 5, ''],
-          ['2020', 16, 22, 23, 30, 16, 9, ''],
-          ['2030', 28, 19, 29, 30, 12, 13, '']
-        ]);
-
-        var options = {
-          isStacked: 'true',
-          legend: {position: 'top', maxLines: 2},
-          width: 270
-        };
-
-        var chart = new google.visualization.BarChart(document.getElementById('barchart'));
-        chart.draw(data, options);
-      }
-      
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(draw_bar_graph);
-
-      banjir = []
-      $.when(retrieve_data_banjir()).then(function (data) {
-        var column = ['Lat', 'Long', 'Name'];
-        
-        banjir.push(column);
-        $.each(data, function(i, f) {
-          row = [Number(f.latitude), Number(f.longitude), String(i)]
-          banjir.push(row)
-        });  
-        console.log(banjir)
-      });
-
-      google.charts.load('current', {
-        'packages':['map'],
-        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
-      });
-      google.charts.setOnLoadCallback(drawRegionsMap);
-      
-      function drawRegionsMap() {
-        var data = google.visualization.arrayToDataTable(banjir);
-
-
-        var options = {
-          mapType: 'styledMap',
-          zoomLevel: 4,
-          showTooltip: true,
-          showInfoWindow: true,
-          useMapTypeControl: true,
-          maps: {
-            styledMap: {
-              name: 'Styled Map', // This name will be displayed in the map type control.
-              styles: [
-                {
-                 stylers: [{hue: "#e7ecf0"}, {saturation: 0}]
-                },
-                {featureType: 'poi',
-                 stylers: [{visibility: 'off'}]
-                },
-                {featureType: 'water',
-                 stylers: [{visibility: 'simplified'}, {saturation: -60}]
-                },
-                {featureType: 'transit',
-                 stylers: [{visibility: 'off'}]
-                },
-                {featureType: 'road',
-                 stylers: [{saturation: -70}]
-                }
-              ]
-            }
-          },
-          icons: {
-            default: {
-              normal: 'https://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Azure-icon.png',
-              selected: 'https://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Right-Azure-icon.png'
-            }
-          }
-        };
-
-        var chart = new google.visualization.Map(document.getElementById('map'));
-          chart.draw(data, options);
-      }
-      
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUV8K_1UzWZfHDQODCCdm5Pf-dTLhDYzE">
-    </script>
-  </body>
 </html>
