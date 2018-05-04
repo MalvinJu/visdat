@@ -3,7 +3,7 @@
 		"pulau": "Jawa",
 		"dataProvinsi": [		
 			{
-				"provinsi": "DKI Jakarta",
+				"provinsi": "Jakarta Raya",
 				"rugiBanjir": 601432000000,
 				"nBanjir": 	48,
 				"rugiGempa": 0,
@@ -48,7 +48,7 @@
 				"nKebakaran": 1
 			},
 			{
-				"provinsi": "DI Yogyakarta",
+				"provinsi": "Yogyakarta JW",
 				"rugiBanjir": 24829000000,
 				"nBanjir": 	9,
 				"rugiGempa": 0,
@@ -84,6 +84,7 @@
 				"rugiBanjir": 205029000000,
 				"nBanjir": 	26,
 				"rugiGempa": 0,
+				"nGempa": 0,
 				"rugiKebakaran": 310000000,
 				"nKebakaran": 10
 			},
@@ -111,20 +112,11 @@
 		"pulau": "Maluku",
 		"dataProvinsi": [		
 			{
-				"provinsi": "Maluku",
-				"rugiBanjir": 104863000000,
-				"nBanjir": 	11,
-				"rugiGempa": 44000000,
-				"nGempa": 129,
-				"rugiKebakaran": 0,
-				"nKebakaran": 0
-			},
-			{
 				"provinsi": "Maluku Utara",
-				"rugiBanjir": 3015000000,
-				"nBanjir": 	4,
-				"rugiGempa": 0,
-				"nGempa": 51,
+				"rugiBanjir": 104863000000,
+				"nBanjir": 	15,
+				"rugiGempa": 44000000,
+				"nGempa": 180,
 				"rugiKebakaran": 0,
 				"nKebakaran": 0
 			}
@@ -143,7 +135,7 @@
 				"nKebakaran": 2
 			},			
 			{
-				"provinsi": "NTB",
+				"provinsi": "Nusa Tenggara Barat",
 				"rugiBanjir": 82368756000,
 				"nBanjir": 	23,
 				"rugiGempa": 148124000000,
@@ -152,7 +144,7 @@
 				"nKebakaran": 0
 			},
 			{
-				"provinsi": "NTT",
+				"provinsi": "Nusa Tenggara Timur",
 				"rugiBanjir": 28448500000,
 				"nBanjir": 	16,
 				"rugiGempa": 20000000,
@@ -168,18 +160,9 @@
 			{
 				"provinsi": "Papua",
 				"rugiBanjir": 48490000000,
-				"nBanjir": 	13,
+				"nBanjir": 	16,
 				"rugiGempa": 0,
-				"nGempa": 57,
-				"rugiKebakaran": 0,
-				"nKebakaran": 0
-			},
-			{
-				"provinsi": "Papua Barat",
-				"rugiBanjir": 2970000000,
-				"nBanjir": 	3,
-				"rugiGempa": 0,
-				"nGempa": 27,
+				"nGempa": 84,
 				"rugiKebakaran": 0,
 				"nKebakaran": 0
 			}
@@ -211,6 +194,7 @@
 				"rugiBanjir": 88382500000,
 				"nBanjir": 	20,
 				"rugiGempa": 60414000000,
+				"nGempa": 0,
 				"rugiKebakaran": 0,
 				"nKebakaran": 3
 			},
@@ -306,7 +290,8 @@
 				"nBanjir": 	11,
 				"rugiGempa": 0,
 				"nGempa": 0,
-				"rugiKebakaran": 2
+				"rugiKebakaran": 1231240000,
+				"nKebakaran": 2,
 			},
 			{
 				"provinsi": "Sumatera Utara",
