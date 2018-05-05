@@ -210,3 +210,67 @@ body {
     background: #4CAF50;
     cursor: pointer;
 }
+
+#map {
+  height: 100%;
+}
+
+.mh1 div{
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-button {
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.green-color {
+  color: #149144;
+  font-size: 15px;
+}
+
+.gray-color {
+  font-size:  10px;
+  text-align: center;
+  color: #808284;
+}
+
+.gray-color-medium {
+  color: #424344;
+  font-size: 12px;
+}
+
+.box {
+  float: left;
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  margin-top: 2px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.black-box {
+  background: #0f0f0f;
+}
+
+.blue-box {
+  background: #384ba0;
+}
+
+.brown-box{
+  background: #b25728;
+}
+
+.yellow-box{
+  background: #f3b31e;
+}
+
+.left {
+  float: left
+}
+
+.chart {
+  width: 100%;
+  margin-right: 5%;
+}

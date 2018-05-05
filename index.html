@@ -13,48 +13,6 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 		<link href="css/dashboard.css" rel="stylesheet">
-		<style>
-			#map {
-				height: 100%;
-			}
-			.mh1 div{
-				position: relative;
-				overflow: hidden;
-			}
-			.green-color {
-				color: #149144;
-				font-size: 15px;
-			}
-			.gray-color {
-				font-size:  10px;
-				text-align: center;
-				color: #808284;
-			}
-			.gray-color-medium {
-				color: #424344;
-				font-size: 12px;
-			}
-			.box {
-			  	float: left;
-			 	width: 12px;
-			 	height: 12px;
-			 	margin-right: 6px;
-			 	margin-top: 2px;
-			 	border: 1px solid rgba(0, 0, 0, .2);
-			}
-			.blue-box {
-				background: #384ba0;
-			}
-			.chocolate-box{
-				background: #b25728;
-			}
-			.yellow-box{
-				background: #f3b31e;
-			}
-			.left {
-				float: left
-			}
-		</style>
 	</head>
 
 	<body>
@@ -117,7 +75,7 @@
 						<option>Jawa</option>
 						<option>Kalimantan</option>
 						<option>Sulawesi</option>
-						<option>Nusa Tenggara</option>
+						<option>Bali dan Nusa Tenggara</option>
 						<option>Papua</option>
 					</select>
 				</div>
@@ -133,10 +91,10 @@
 				<div class="row">
 					<main role="main" class="col-md-12 ml-sm-12 col-lg-12 pt-0 px-4">
 						<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-							<h1 class="h2">Persebaran Bencana Alam di <span> Indonesia </span> </h1>
+							<h1 class="h2">Persebaran Bencana Alam di Indonesia </h1>
 							<div class="btn-toolbar mb-2 mb-md-0">
 								<div class="btn-group mr-2">
-									<h1 class="lead pl-4 pt-2 pl-1" style="font-size: 17px;cursor:pointer" onclick="openNav()"><i class="fa">&#xf0b0;</i> Filter</h1>
+									<h1 class="lead pl-4 pt-2 pl-1 filter-button"onclick="openNav()"><i class="fa">&#xf0b0;</i> Filter</h1>
 								</div>
 							</div>
 						</div>
@@ -162,19 +120,27 @@
 
 							<div class="col-md-4">
 								<div class="ml-2 mr-2">
-                    				<hr class="bg-light pb-0 mb-0 mt-0"></hr>
-									<div class="gray-color">Pulau <br/><strong class="d-inline-block mb-1 green-color">Sumatera</strong></div>
+									<hr class="bg-light pb-0 mb-0 mt-0"></hr>
+									<div class="gray-color">Pulau <br/><strong id="pulauName" class="d-inline-block mb-1 green-color">Jawa</strong></div>
 									<div class="gray-color">
-										Legend: <br/> 
-										<strong class="d-inline-block gray-color-medium">
-											<div class="box yellow-box"></div> <span class="left mr-2">Kebakaran </span> 
-											<div class="box chocolate-box"></div> <span class="left mr-2">Gempa Bumi </span>
-											<div class="box blue-box"></div><span class="left mr-2">Banjir </span>
+										Legenda:
+										<strong class="d-inline-block gray-color-medium col-md-12">
+											<div class="row">
+												<div class="col-md-4">
+												 	<div class="box blue-box"></div> <span class="left mr-2">Banjir</span> 
+												</div>
+												<div class="col-md-4">
+													<div class="box brown-box"></div> <span class="left mr-2">Gempa Bumi</span>
+												</div>
+												<div class="col-md-4">
+													<div class="box yellow-box"></div> <span class="left mr-2">Kebakaran</span> 
+												</div>
+											</div>
 										</strong>
 									</div>
 									<h3 class="mb-0" id="rumah_rusak"></h3>
-                    				<hr class="bg-light pb-0 mb-0 mt-0"></hr>
-							  </div>
+									<hr class="bg-light pb-0 mb-0 mt-0"></hr>
+								</div>
 							</div>
 						</div>
 					</main>
@@ -193,7 +159,7 @@
 									<div class="card flex-md-row box-shadow h-md-250 graph-height">
 										<div class="card-body d-flex flex-column align-items-start pt-2 pb-2">
 											<strong class="d-inline-block mb-2 text-primary">Kerugian Material <span> (100 miliar rupiah) </span> </strong>                        
-											<div id="barchart"></div>
+											<div id="barchart" class="chart"></div>
 										</div>
 									</div>
 								</div>
@@ -201,7 +167,7 @@
 									<div class="card flex-md-row box-shadow h-md-250 graph-height">
 										<div class="card-body d-flex flex-column align-items-start pt-2 pb-2">
 											<strong class="d-inline-block mb-2 text-primary">Jumlah Kejadian Bencana</strong>
-											<div id="piechart"></div>
+											<div id="piechart" class="chart"></div>
 										</div>
 									</div>
 								</div>
@@ -228,7 +194,7 @@
 
 	<!-- Graphs -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+	<script defer type="text/javascript" src="js/script.js"></script>
 
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUV8K_1UzWZfHDQODCCdm5Pf-dTLhDYzE"></script>
 
