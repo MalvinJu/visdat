@@ -26,6 +26,28 @@ function getJSONPulau() {
 	return $.getJSON('https://raw.githubusercontent.com/MalvinJu/visdat/master/data/tespulau.json');
 }
 
+numeral.register('locale', 'id', {
+    delimiters: {
+        thousands: '.',
+        decimal: ','
+    },
+    abbreviations: {
+        thousand: 'ribu',
+        million: 'juta',
+        billion: 'miliar',
+        trillion: 'triliun'
+    },
+    ordinal : function (number) {
+        return number === 1 ? 'er' : 'ème';
+    },
+    currency: {
+        symbol: 'Rp '
+    }
+});
+
+// switch between locales
+numeral.locale('id');
+
 //MAP
 var arrayMapData = [];
 var label = [ {label: 'LATITUDE', id: 'Latitude', type: 'number'},
@@ -312,8 +334,8 @@ $.when(getJSONPulau()).then(function (data) {
 		}
 	});
 
-	document.getElementById("jumlah_bencana").innerHTML = totalBencanaJawa;
-	document.getElementById("kerugian").innerHTML = totalKerugianJawa;
+	document.getElementById("jumlah_bencana").innerHTML = numeral(totalBencanaJawa).format('0,00 a');
+	document.getElementById("kerugian").innerHTML = numeral(totalKerugianJawa).format('$0.00 a');
 });
 
 google.charts.load('current', {
@@ -326,7 +348,7 @@ function drawBarChart(array, name) {
 	var data = google.visualization.arrayToDataTable(array);
 
 	var options = {
-		legend: { position: 'top', maxLines: 3 },
+		legend: 'none',
 		isStacked: 'true',
 		width: 280,
 		colors:['#384ba0','#b25728','#f3b31e']
@@ -345,7 +367,8 @@ function drawPieChart(array,name) {
 		namaProvinsi = 'Pulau Bali dan Nusa Tenggara ';
 	}
 	var options = {
-		title: namaProvinsi,
+		legend: 'none',
+		width: 280,
 		colors:['#384ba0','#b25728','#f3b31e']
 	};
 	var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -357,44 +380,44 @@ $("#mySidenav").change(function () {
   	var pulau = $(this).text();
   	switch (pulau) {
   		case 'Jawa':
-  			document.getElementById("jumlah_bencana").innerHTML = totalBencanaJawa;
-				document.getElementById("kerugian").innerHTML = totalKerugianJawa;
+  			document.getElementById("jumlah_bencana").innerHTML = numeral(totalBencanaJawa).format('0,00 a');
+			document.getElementById("kerugian").innerHTML = numeral(totalKerugianJawa).format('$0.00 a');
   			google.charts.setOnLoadCallback(function() {drawBarChart(arrayBarJawa, 'Jawa'); });
   			google.charts.setOnLoadCallback(function() {drawPieChart(arrayPieJawa, 'Jawa'); });
   			break;
   		case 'Kalimantan':
-  			document.getElementById("jumlah_bencana").innerHTML = totalBencanaKalimantan;
-				document.getElementById("kerugian").innerHTML = totalKerugianKalimantan;
+  			document.getElementById("jumlah_bencana").innerHTML = numeral(totalBencanaKalimantan).format('0,00 a');
+			document.getElementById("kerugian").innerHTML = numeral(totalKerugianKalimantan).format('$0.00 a');
   			google.charts.setOnLoadCallback(function() {drawBarChart(arrayBarKalimantan, 'Kalimantan'); });
   			google.charts.setOnLoadCallback(function() {drawPieChart(arrayPieKalimantan, 'Kalimantan'); });
   			break;
   		case 'Maluku':
-  			document.getElementById("jumlah_bencana").innerHTML = totalBencanaMaluku;
-				document.getElementById("kerugian").innerHTML = totalKerugianMaluku;
+  			document.getElementById("jumlah_bencana").innerHTML = numeral(totalBencanaMaluku).format('0,00 a');
+			document.getElementById("kerugian").innerHTML = numeral(totalKerugianMaluku).format('$0.00 a');
   			google.charts.setOnLoadCallback(function() {drawBarChart(arrayBarMaluku, 'Maluku'); });
   			google.charts.setOnLoadCallback(function() {drawPieChart(arrayPieMaluku, 'Maluku'); });
   			break;
   		case 'Nusa Tenggara':
-  			document.getElementById("jumlah_bencana").innerHTML = totalBencanaNT;
-				document.getElementById("kerugian").innerHTML = totalKerugianNT;
+  			document.getElementById("jumlah_bencana").innerHTML = numeral(totalBencanaNT).format('0,00 a');
+  			document.getElementById("kerugian").innerHTML = numeral(totalKerugianNT).format('$0.00 a');
   			google.charts.setOnLoadCallback(function() {drawBarChart(arrayBarNT, 'NT'); });
   			google.charts.setOnLoadCallback(function() {drawPieChart(arrayPieNT, 'NT'); });
   			break;
   		case 'Papua':
-  			document.getElementById("jumlah_bencana").innerHTML = totalBencanaPapua;
-				document.getElementById("kerugian").innerHTML = totalKerugianPapua;
+  			document.getElementById("jumlah_bencana").innerHTML = numeral(totalBencanaPapua).format('0,00 a');
+  			document.getElementById("kerugian").innerHTML = numeral(totalKerugianPapua).format('$0.00 a');
   			google.charts.setOnLoadCallback(function() {drawBarChart(arrayBarPapua, 'Papua'); });
   			google.charts.setOnLoadCallback(function() {drawPieChart(arrayPiePapua, 'Papua'); });
   			break;
   		case 'Sulawesi':
-  			document.getElementById("jumlah_bencana").innerHTML = totalBencanaSulawesi;
-				document.getElementById("kerugian").innerHTML = totalKerugianSulawesi;
+  			document.getElementById("jumlah_bencana").innerHTML = numeral(totalBencanaSulawesi).format('0,00 a');
+  			document.getElementById("kerugian").innerHTML = numeral(totalKerugianSulawesi).format('$0.00 a');
   			google.charts.setOnLoadCallback(function() {drawBarChart(arrayBarSulawesi, 'Sulawesi'); });
   			google.charts.setOnLoadCallback(function() {drawPieChart(arrayPieSulawesi, 'Sulawesi'); });
   			break;
   		case 'Sumatera':
-  			document.getElementById("jumlah_bencana").innerHTML = totalBencanaSumatera;
-				document.getElementById("kerugian").innerHTML = totalKerugianSumatera;
+  			document.getElementById("jumlah_bencana").innerHTML = numeral(totalBencanaSumatera).format('0,00 a');
+  			document.getElementById("kerugian").innerHTML = numeral(totalKerugianSumatera).format('$0.00 a');
   			google.charts.setOnLoadCallback(function() {drawBarChart(arrayBarSumatera, 'Sumatera'); });
   			google.charts.setOnLoadCallback(function() {drawPieChart(arrayPieSumatera, 'Sumatera'); });
   			break;
