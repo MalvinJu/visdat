@@ -86,6 +86,7 @@ lossRegionMapArray.push(regionMapLabel);
 
 //BAR
 var barChartArray = [];
+var barChartArrayDirty = [];
 var barChartLabel = [ {label: 'Provinsi', id: 'provinsi', type: 'string'},
 												{label: 'Banjir', id: 'banjir', type: 'number'},
 												{label: 'Gempa Bumi', id: 'gempa', type: 'number'},
@@ -100,6 +101,15 @@ pieChartArray.push(pieChartLabel);
 
 //PARSE
 function readData(yFrom, yTo, iName, dType) {
+	numRegionMapArray = [];
+	lossRegionMapArray = [];
+	numRegionMapArray.push(regionMapLabel);
+	lossRegionMapArray.push(regionMapLabel);
+	barChartArray = [];
+	barChartArray.push(barChartLabel);
+	barChartArrayDirty = [];
+	pieChartArray = [];
+	pieChartArray.push(pieChartLabel);
 	console.log(yFrom);
 	console.log(yTo);
 	console.log(iName);
@@ -112,6 +122,9 @@ function readData(yFrom, yTo, iName, dType) {
 			if (year >= yFrom && year <= yTo) {
 				$.each(yVal.dataPulau, function(iKey, iVal) {
 					pulau = iVal.pulau;
+					totalLossFlood = 0
+					totalLossQuake = 0
+					totalLossFire = 0
 					totalNumFlood = 0;
 					totalNumQuake = 0;
 					totalNumFFire = 0;
@@ -137,6 +150,10 @@ function readData(yFrom, yTo, iName, dType) {
 
 									lossRegionMapData = [province, totalLossCount];
 
+									totalLossFlood += lossFlood/100000000000;
+									totalLossFire += lossFFire/100000000000;
+									totalLossQuake += lossQuake/100000000000;
+
 									barChartData = [province, lossFlood/100000000000, lossQuake/100000000000, lossFFire/100000000000];
 									
 									totalNumFlood += numFlood;
@@ -157,6 +174,8 @@ function readData(yFrom, yTo, iName, dType) {
 
 									barChartData = [province, lossFlood/100000000000, 0, 0];
 									
+									totalLossFlood += lossFlood/100000000000;
+
 									totalNumFlood += numFlood;
 									totalNumQuake += numQuake;
 									totalNumFFire += numFFire;
@@ -173,6 +192,7 @@ function readData(yFrom, yTo, iName, dType) {
 
 									lossRegionMapData = [province, totalLossCount];
 
+									totalLossQuake += lossQuake/100000000000;
 									barChartData = [province, 0, lossQuake/100000000000, 0];
 									
 									totalNumFlood += numFlood;
@@ -191,6 +211,7 @@ function readData(yFrom, yTo, iName, dType) {
 
 									lossRegionMapData = [province, totalLossCount];
 
+									totalLossFire += lossFFire/100000000000;
 									barChartData = [province, 0, 0, lossFFire/100000000000];
 									
 									totalNumFlood += numFlood;
@@ -209,6 +230,8 @@ function readData(yFrom, yTo, iName, dType) {
 
 									lossRegionMapData = [province, totalLossCount];
 
+									totalLossFlood += lossFlood/100000000000;
+									totalLossQuake += lossQuake/100000000000;
 									barChartData = [province, lossFlood/100000000000, lossQuake/100000000000, 0];
 									
 									totalNumFlood += numFlood;
@@ -227,6 +250,8 @@ function readData(yFrom, yTo, iName, dType) {
 
 									lossRegionMapData = [province, totalLossCount];
 
+									totalLossFlood += lossFlood/100000000000;
+									totalLossFire += lossFFire/100000000000;
 									barChartData = [province, lossFlood/100000000000, 0, lossFFire/100000000000];
 									
 									totalNumFlood += numFlood;
@@ -245,6 +270,8 @@ function readData(yFrom, yTo, iName, dType) {
 
 									lossRegionMapData = [province, totalLossCount];
 
+									totalLossFire += lossFFire/100000000000;
+									totalLossQuake += lossQuake/100000000000;
 									barChartData = [province, 0, lossQuake/100000000000, lossFFire/100000000000];
 									
 									totalNumFlood += numFlood;
@@ -257,16 +284,50 @@ function readData(yFrom, yTo, iName, dType) {
 							}
 							numRegionMapArray.push(numRegionMapData);
 							lossRegionMapArray.push(lossRegionMapData);
-							barChartArray.push(barChartData);
+							if (iName == pulau) {
+								barChartArrayDirty.push(barChartData);
+							}
 						})
-						arrNumFlood = ["Banjir", totalNumFlood];
-						arrNumQuake = ["Gempa Bumi", totalNumQuake];
-						arrNumFFire = ["Kebakaran Hutan", totalNumFFire];
-						pieChartArray.push(arrNumFlood, arrNumQuake, arrNumFFire);
+						
+					}
+					if (iName == "Seluruh Indonesia") {
+						barChartArrayDirty.push([pulau, totalLossFlood, totalLossQuake, totalLossFire]);
 					}
 				})
 			}
 		})
+		arrNumFlood = ["Banjir", totalNumFlood];
+		arrNumQuake = ["Gempa Bumi", totalNumQuake];
+		arrNumFFire = ["Kebakaran Hutan", totalNumFFire];
+		pieChartArray.push(arrNumFlood, arrNumQuake, arrNumFFire);
+		console.log(barChartArrayDirty)
+		console.log(yTo-yFrom+1)
+		for (i = 0; i < barChartArrayDirty.length/(yTo-yFrom+1); i++) {
+			pulau = barChartArrayDirty[i][0];
+			totalLossFire = barChartArrayDirty[i][3];
+			totalLossQuake = barChartArrayDirty[i][2];
+			totalLossFlood = barChartArrayDirty[i][1];
+			for (j = 0; j < barChartArrayDirty.length; j++) {
+		    	if (i != j) {
+		    		if (barChartArrayDirty[i][0] == barChartArrayDirty[j][0]) {
+		    			totalLossFire += barChartArrayDirty[j][3];
+						totalLossQuake += barChartArrayDirty[j][2];
+						totalLossFlood += barChartArrayDirty[j][1];
+		    		}
+		    	}
+			}
+			barChartArray.push([pulau, totalLossFlood, totalLossQuake, totalLossFire]);
+		}
+		console.log(pieChartArray) 
+		google.charts.setOnLoadCallback(function() {
+			drawRegionMap(numRegionMapArray, black);
+		});
+		google.charts.setOnLoadCallback(function() {
+			drawBarChart(barChartArray);
+		});
+		google.charts.setOnLoadCallback(function() {
+			drawPieChart(pieChartArray, blue, brown, yellow); 
+		});
 	})
 }
 
@@ -275,15 +336,7 @@ google.charts.load('current', {
 	'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
 });
 
-google.charts.setOnLoadCallback(function() {
-	drawRegionMap(numRegionMapArray, black);
-});
-google.charts.setOnLoadCallback(function() {
-	drawBarChart(barChartArray);
-});
-google.charts.setOnLoadCallback(function() {
-	drawPieChart(pieChartArray); 
-});
+
 
 function drawPlotMap() {
 	var x = google.visualization.arrayToDataTable(arrayMapData);
@@ -362,15 +415,7 @@ $("#mySidenav").change(function () {
 	$("#kerugian").text(numeral(sumLossCount).format('$0.00 a'));
 
 	readData(yFrom, yTo, iName, dType);
-	google.charts.setOnLoadCallback(function() {
-		drawRegionMap(numRegionMapArray, black);
-	});
-	google.charts.setOnLoadCallback(function() {
-		drawBarChart(barChartArray);
-	});
-	google.charts.setOnLoadCallback(function() {
-		drawPieChart(pieChartArray, blue, brown, yellow); 
-	});
+
 
 	$("#selectPulau option:selected" ).each(function() {
   	var pulau = $(this).text();
