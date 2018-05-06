@@ -101,7 +101,7 @@ pieChartArray.push(pieChartLabel);
 
 //Carousal
 $('#mapCarousel').on('slide.bs.carousel', function () {
-  	yFrom = Number($("#yearFrom option:selected").text());
+  yFrom = Number($("#yearFrom option:selected").text());
 	yTo = Number($("#yearTo option:selected").text());
 	iName = $("#selectPulau option:selected" ).text();
 	if (iName == "Bali dan Nusa Tenggara") {

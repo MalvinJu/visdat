@@ -54,7 +54,7 @@ body {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #111;
+    background-color: #6b6b6b;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -150,6 +150,10 @@ body {
 .filter-button {
   font-size: 17px;
   cursor: pointer;
+}
+
+.filter-button:hover {
+  scale: 50%;
 }
 
 .green-color {
