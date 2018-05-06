@@ -1,1 +1,1687 @@
-{"2013": {"Papua": {"Papua": {"nGempa": 27, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Papua Barat": {"nGempa": 4, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Maluku": {"Maluku Utara": {"nGempa": 16, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Maluku": {"nGempa": 40, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Jawa": {"DI Yogyakarta": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 31944000000, "rugiKebakaran": 0}, "Jawa Tengah": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jawa Barat": {"nGempa": 14, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Banten": {"nGempa": 2, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jawa Timur": {"nGempa": 6, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 50000000, "rugiKebakaran": 0}, "Jakarta": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Sumatera": {"Sumatera Barat": {"nGempa": 9, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jambi": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sumatera Utara": {"nGempa": 5, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sumatera Selatan": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Lampung": {"nGempa": 6, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Bengkulu": {"nGempa": 14, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Riau": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Aceh": {"nGempa": 26, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 454588000000, "rugiKebakaran": 0}}, "Nusa Tenggara": {"Bali": {"nGempa": 3, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "NTT": {"nGempa": 7, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "NTB": {"nGempa": 10, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Sulawesi": {"Sulawesi Tenggara": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Gorontalo": {"nGempa": 6, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Utara": {"nGempa": 18, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Selatan": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Barat": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 957037000000, "rugiKebakaran": 0}, "Sulawesi Tengah": {"nGempa": 7, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}}, "2010": {"Papua": {"Papua": {"nGempa": 5, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Papua Barat": {"nGempa": 14, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Maluku": {"Maluku Utara": {"nGempa": 8, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Maluku": {"nGempa": 30, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Jawa": {"DI Yogyakarta": {"nGempa": 5, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jawa Tengah": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jawa Barat": {"nGempa": 7, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Banten": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jawa Timur": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jakarta": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Sumatera": {"Sumatera Barat": {"nGempa": 19, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jambi": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sumatera Utara": {"nGempa": 2, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sumatera Selatan": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Lampung": {"nGempa": 3, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Bengkulu": {"nGempa": 6, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Riau": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Aceh": {"nGempa": 11, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Nusa Tenggara": {"Bali": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "NTT": {"nGempa": 5, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "NTB": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Sulawesi": {"Sulawesi Tenggara": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Gorontalo": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Utara": {"nGempa": 8, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Selatan": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Barat": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Tengah": {"nGempa": 2, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}}, "2011": {"Papua": {"Papua": {"nGempa": 7, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Papua Barat": {"nGempa": 5, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Maluku": {"Maluku Utara": {"nGempa": 9, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Maluku": {"nGempa": 35, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Jawa": {"DI Yogyakarta": {"nGempa": 2, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jawa Tengah": {"nGempa": 6, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jawa Barat": {"nGempa": 7, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Banten": {"nGempa": 5, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jawa Timur": {"nGempa": 5, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jakarta": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Sumatera": {"Sumatera Barat": {"nGempa": 6, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jambi": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sumatera Utara": {"nGempa": 14, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sumatera Selatan": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Lampung": {"nGempa": 4, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Bengkulu": {"nGempa": 22, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Riau": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Aceh": {"nGempa": 17, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Nusa Tenggara": {"Bali": {"nGempa": 5, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "NTT": {"nGempa": 8, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "NTB": {"nGempa": 4, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Sulawesi": {"Sulawesi Tenggara": {"nGempa": 3, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Gorontalo": {"nGempa": 3, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Utara": {"nGempa": 33, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Selatan": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Barat": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Tengah": {"nGempa": 4, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}}, "2014": {"Papua": {"Papua": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Papua Barat": {"nGempa": 2, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Maluku": {"Maluku Utara": {"nGempa": 3, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Maluku": {"nGempa": 9, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Jawa": {"DI Yogyakarta": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jawa Tengah": {"nGempa": 2, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jawa Barat": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Banten": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jawa Timur": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jakarta": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Sumatera": {"Sumatera Barat": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jambi": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sumatera Utara": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sumatera Selatan": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Lampung": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Bengkulu": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Riau": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Aceh": {"nGempa": 2, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Nusa Tenggara": {"Bali": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "NTT": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "NTB": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Sulawesi": {"Sulawesi Tenggara": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Gorontalo": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Utara": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Selatan": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Barat": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Tengah": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}}, "2012": {"Papua": {"Papua": {"nGempa": 22, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 411194000000, "rugiKebakaran": 0}, "Papua Barat": {"nGempa": 20, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Maluku": {"Maluku Utara": {"nGempa": 23, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Maluku": {"nGempa": 44, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Jawa": {"DI Yogyakarta": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jawa Tengah": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jawa Barat": {"nGempa": 11, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Banten": {"nGempa": 4, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jawa Timur": {"nGempa": 19, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 149826000000, "rugiKebakaran": 0}, "Jakarta": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Sumatera": {"Sumatera Barat": {"nGempa": 10, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Jambi": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sumatera Utara": {"nGempa": 6, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sumatera Selatan": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Lampung": {"nGempa": 6, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Bengkulu": {"nGempa": 14, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Riau": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Aceh": {"nGempa": 114, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 675000000, "rugiKebakaran": 0}}, "Nusa Tenggara": {"Bali": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "NTT": {"nGempa": 12, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "NTB": {"nGempa": 5, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}, "Sulawesi": {"Sulawesi Tenggara": {"nGempa": 0, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Gorontalo": {"nGempa": 8, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Utara": {"nGempa": 35, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Selatan": {"nGempa": 8, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Barat": {"nGempa": 1, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}, "Sulawesi Tengah": {"nGempa": 8, "rugiBanjir": 0, "nBanjir": 0, "nKebakaran": 0, "rugiGempa": 0, "rugiKebakaran": 0}}}}
+[
+    {
+        "dataPulau": [
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 5,
+                        "nKebakaran": 0,
+                        "provinsi": "DI Yogyakarta",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Jakarta",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Jawa Timur",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Banten",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 7,
+                        "nKebakaran": 0,
+                        "provinsi": "Jawa Barat",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Jawa Tengah",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Jawa"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Gorontalo",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Barat",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 8,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Utara",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Selatan",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 2,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Tengah",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Tenggara",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Sulawesi"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Bali",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "NTB",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 5,
+                        "nKebakaran": 0,
+                        "provinsi": "NTT",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Nusa Tenggara"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 5,
+                        "nKebakaran": 0,
+                        "provinsi": "Papua",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 14,
+                        "nKebakaran": 0,
+                        "provinsi": "Papua Barat",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Papua"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 3,
+                        "nKebakaran": 0,
+                        "provinsi": "Lampung",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 19,
+                        "nKebakaran": 0,
+                        "provinsi": "Sumatera Barat",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Sumatera Selatan",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 2,
+                        "nKebakaran": 0,
+                        "provinsi": "Sumatera Utara",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 6,
+                        "nKebakaran": 0,
+                        "provinsi": "Bengkulu",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 11,
+                        "nKebakaran": 0,
+                        "provinsi": "Aceh",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Bangka Belitung",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Riau",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Jambi",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Sumatera"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Tengah",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Timur",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Selatan",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Utara",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Barat",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Kalimantan"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 8,
+                        "nKebakaran": 0,
+                        "provinsi": "Maluku Utara",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 30,
+                        "nKebakaran": 0,
+                        "provinsi": "Maluku",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Maluku"
+            }
+        ],
+        "tahun": "2010"
+    },
+    {
+        "dataPulau": [
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "DI Yogyakarta",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 9,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Jakarta",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 35,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Jawa Timur",
+                        "rugiBanjir": 116003000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 8,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Banten",
+                        "rugiBanjir": 38646000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 13,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Jawa Barat",
+                        "rugiBanjir": 17467000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 35,
+                        "nGempa": 2,
+                        "nKebakaran": 0,
+                        "provinsi": "Jawa Tengah",
+                        "rugiBanjir": 58036000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Jawa"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Gorontalo",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Barat",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 4,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Utara",
+                        "rugiBanjir": 195430000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Selatan",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 20,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Tengah",
+                        "rugiBanjir": 54757500000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Tenggara",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Sulawesi"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 2,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Bali",
+                        "rugiBanjir": 213000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 2,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "NTB",
+                        "rugiBanjir": 2927000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 1,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "NTT",
+                        "rugiBanjir": 350000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Nusa Tenggara"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Papua",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 2,
+                        "nKebakaran": 0,
+                        "provinsi": "Papua Barat",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Papua"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 11,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Lampung",
+                        "rugiBanjir": 55498500000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Sumatera Barat",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Sumatera Selatan",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 8,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Sumatera Utara",
+                        "rugiBanjir": 32323052000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 1,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Bengkulu",
+                        "rugiBanjir": 25000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 4,
+                        "nGempa": 2,
+                        "nKebakaran": 0,
+                        "provinsi": "Aceh",
+                        "rugiBanjir": 38987000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Bangka Belitung",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 1,
+                        "provinsi": "Riau",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 2811451500000
+                    },
+                    {
+                        "nBanjir": 6,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Jambi",
+                        "rugiBanjir": 42508000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Sumatera"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Tengah",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 1,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Timur",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 7,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Selatan",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Utara",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 1,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Barat",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Kalimantan"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 3,
+                        "nKebakaran": 0,
+                        "provinsi": "Maluku Utara",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 1,
+                        "nGempa": 9,
+                        "nKebakaran": 0,
+                        "provinsi": "Maluku",
+                        "rugiBanjir": 2411000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Maluku"
+            }
+        ],
+        "tahun": "2014"
+    },
+    {
+        "dataPulau": [
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "DI Yogyakarta",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 11,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Jakarta",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 29,
+                        "nGempa": 19,
+                        "nKebakaran": 1,
+                        "provinsi": "Jawa Timur",
+                        "rugiBanjir": 69292500000,
+                        "rugiGempa": 149826000000,
+                        "rugiKebakaran": 25200000000
+                    },
+                    {
+                        "nBanjir": 8,
+                        "nGempa": 4,
+                        "nKebakaran": 0,
+                        "provinsi": "Banten",
+                        "rugiBanjir": 74146000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 17,
+                        "nGempa": 11,
+                        "nKebakaran": 0,
+                        "provinsi": "Jawa Barat",
+                        "rugiBanjir": 77706500000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 15,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Jawa Tengah",
+                        "rugiBanjir": 28507000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Jawa"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 14,
+                        "nGempa": 8,
+                        "nKebakaran": 0,
+                        "provinsi": "Gorontalo",
+                        "rugiBanjir": 33825000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 3,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Barat",
+                        "rugiBanjir": 30344000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 6,
+                        "nGempa": 35,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Utara",
+                        "rugiBanjir": 38534000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 10,
+                        "nGempa": 8,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Selatan",
+                        "rugiBanjir": 107553000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 3,
+                        "nGempa": 8,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Tengah",
+                        "rugiBanjir": 3660000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 4,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Tenggara",
+                        "rugiBanjir": 12986775000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Sulawesi"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 2,
+                        "nGempa": 1,
+                        "nKebakaran": 2,
+                        "provinsi": "Bali",
+                        "rugiBanjir": 4158000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 17808000000
+                    },
+                    {
+                        "nBanjir": 16,
+                        "nGempa": 5,
+                        "nKebakaran": 0,
+                        "provinsi": "NTB",
+                        "rugiBanjir": 70725756000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 5,
+                        "nGempa": 12,
+                        "nKebakaran": 0,
+                        "provinsi": "NTT",
+                        "rugiBanjir": 9988500000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Nusa Tenggara"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 4,
+                        "nGempa": 22,
+                        "nKebakaran": 0,
+                        "provinsi": "Papua",
+                        "rugiBanjir": 5428000000,
+                        "rugiGempa": 411194000000,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 20,
+                        "nKebakaran": 0,
+                        "provinsi": "Papua Barat",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Papua"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 8,
+                        "nGempa": 6,
+                        "nKebakaran": 0,
+                        "provinsi": "Lampung",
+                        "rugiBanjir": 13900500000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 14,
+                        "nGempa": 10,
+                        "nKebakaran": 0,
+                        "provinsi": "Sumatera Barat",
+                        "rugiBanjir": 55400000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 5,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Sumatera Selatan",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 25,
+                        "nGempa": 6,
+                        "nKebakaran": 0,
+                        "provinsi": "Sumatera Utara",
+                        "rugiBanjir": 110804000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 6,
+                        "nGempa": 14,
+                        "nKebakaran": 0,
+                        "provinsi": "Bengkulu",
+                        "rugiBanjir": 9507500000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 15,
+                        "nGempa": 114,
+                        "nKebakaran": 0,
+                        "provinsi": "Aceh",
+                        "rugiBanjir": 139658000000,
+                        "rugiGempa": 675000000,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Bangka Belitung",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Riau",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 5,
+                        "nGempa": 0,
+                        "nKebakaran": 1,
+                        "provinsi": "Jambi",
+                        "rugiBanjir": 29018500000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 4200000000
+                    }
+                ],
+                "pulau": "Sumatera"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Tengah",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 13,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Timur",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Selatan",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Utara",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 2,
+                        "nGempa": 0,
+                        "nKebakaran": 1,
+                        "provinsi": "Kalimantan Barat",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 4200000000
+                    }
+                ],
+                "pulau": "Kalimantan"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 3,
+                        "nGempa": 23,
+                        "nKebakaran": 0,
+                        "provinsi": "Maluku Utara",
+                        "rugiBanjir": 4415000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 4,
+                        "nGempa": 44,
+                        "nKebakaran": 0,
+                        "provinsi": "Maluku",
+                        "rugiBanjir": 9567000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Maluku"
+            }
+        ],
+        "tahun": "2012"
+    },
+    {
+        "dataPulau": [
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 2,
+                        "nKebakaran": 0,
+                        "provinsi": "DI Yogyakarta",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Jakarta",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 52,
+                        "nGempa": 5,
+                        "nKebakaran": 0,
+                        "provinsi": "Jawa Timur",
+                        "rugiBanjir": 734956000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 2,
+                        "nGempa": 5,
+                        "nKebakaran": 0,
+                        "provinsi": "Banten",
+                        "rugiBanjir": 3078000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 15,
+                        "nGempa": 7,
+                        "nKebakaran": 0,
+                        "provinsi": "Jawa Barat",
+                        "rugiBanjir": 84436500000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 19,
+                        "nGempa": 6,
+                        "nKebakaran": 2,
+                        "provinsi": "Jawa Tengah",
+                        "rugiBanjir": 48466000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 3864000000
+                    }
+                ],
+                "pulau": "Jawa"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 2,
+                        "nGempa": 3,
+                        "nKebakaran": 0,
+                        "provinsi": "Gorontalo",
+                        "rugiBanjir": 8837000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Barat",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 33,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Utara",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 1,
+                        "provinsi": "Sulawesi Selatan",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 5712000000
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 4,
+                        "nKebakaran": 3,
+                        "provinsi": "Sulawesi Tengah",
+                        "rugiBanjir": 26605000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 24108000000
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 3,
+                        "nKebakaran": 4,
+                        "provinsi": "Sulawesi Tenggara",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 20412000000
+                    }
+                ],
+                "pulau": "Sulawesi"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 1,
+                        "nGempa": 5,
+                        "nKebakaran": 0,
+                        "provinsi": "Bali",
+                        "rugiBanjir": 2079000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 2,
+                        "nGempa": 4,
+                        "nKebakaran": 0,
+                        "provinsi": "NTB",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 8,
+                        "nKebakaran": 0,
+                        "provinsi": "NTT",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Nusa Tenggara"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 7,
+                        "nKebakaran": 0,
+                        "provinsi": "Papua",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 5,
+                        "nKebakaran": 0,
+                        "provinsi": "Papua Barat",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Papua"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 4,
+                        "nKebakaran": 0,
+                        "provinsi": "Lampung",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 6,
+                        "nKebakaran": 0,
+                        "provinsi": "Sumatera Barat",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 2,
+                        "provinsi": "Sumatera Selatan",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 5,
+                        "nGempa": 14,
+                        "nKebakaran": 0,
+                        "provinsi": "Sumatera Utara",
+                        "rugiBanjir": 148426000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 1,
+                        "nGempa": 22,
+                        "nKebakaran": 0,
+                        "provinsi": "Bengkulu",
+                        "rugiBanjir": 1987000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 6,
+                        "nGempa": 17,
+                        "nKebakaran": 8,
+                        "provinsi": "Aceh",
+                        "rugiBanjir": 21449500000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 33348000000
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Bangka Belitung",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 1,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Riau",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 2,
+                        "provinsi": "Jambi",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 14868000000
+                    }
+                ],
+                "pulau": "Sumatera"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 13,
+                        "provinsi": "Kalimantan Tengah",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 73752000000
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 10,
+                        "provinsi": "Kalimantan Timur",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 69132000000
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 5,
+                        "provinsi": "Kalimantan Selatan",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 21084000000
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Utara",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 0,
+                        "nKebakaran": 2,
+                        "provinsi": "Kalimantan Barat",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 9744000000
+                    }
+                ],
+                "pulau": "Kalimantan"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 1,
+                        "nGempa": 9,
+                        "nKebakaran": 0,
+                        "provinsi": "Maluku Utara",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 1,
+                        "nGempa": 35,
+                        "nKebakaran": 0,
+                        "provinsi": "Maluku",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Maluku"
+            }
+        ],
+        "tahun": "2011"
+    },
+    {
+        "dataPulau": [
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 9,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "DI Yogyakarta",
+                        "rugiBanjir": 24829000000,
+                        "rugiGempa": 31944000000,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 28,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Jakarta",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 30,
+                        "nGempa": 6,
+                        "nKebakaran": 0,
+                        "provinsi": "Jawa Timur",
+                        "rugiBanjir": 357875000000,
+                        "rugiGempa": 50000000,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 14,
+                        "nGempa": 2,
+                        "nKebakaran": 0,
+                        "provinsi": "Banten",
+                        "rugiBanjir": 208966000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 49,
+                        "nGempa": 14,
+                        "nKebakaran": 0,
+                        "provinsi": "Jawa Barat",
+                        "rugiBanjir": 682970000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 21,
+                        "nGempa": 0,
+                        "nKebakaran": 1,
+                        "provinsi": "Jawa Tengah",
+                        "rugiBanjir": 113268000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 12600000000
+                    }
+                ],
+                "pulau": "Jawa"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 12,
+                        "nGempa": 6,
+                        "nKebakaran": 0,
+                        "provinsi": "Gorontalo",
+                        "rugiBanjir": 110994000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 4,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Barat",
+                        "rugiBanjir": 19788000000,
+                        "rugiGempa": 957037000000,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 4,
+                        "nGempa": 18,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Utara",
+                        "rugiBanjir": 8067000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 16,
+                        "nGempa": 1,
+                        "nKebakaran": 1,
+                        "provinsi": "Sulawesi Selatan",
+                        "rugiBanjir": 98375500000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 8400000000
+                    },
+                    {
+                        "nBanjir": 6,
+                        "nGempa": 7,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Tengah",
+                        "rugiBanjir": 2910000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 8,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Sulawesi Tenggara",
+                        "rugiBanjir": 107463000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Sulawesi"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 3,
+                        "nKebakaran": 0,
+                        "provinsi": "Bali",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 3,
+                        "nGempa": 10,
+                        "nKebakaran": 0,
+                        "provinsi": "NTB",
+                        "rugiBanjir": 14666000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 10,
+                        "nGempa": 7,
+                        "nKebakaran": 0,
+                        "provinsi": "NTT",
+                        "rugiBanjir": 19160000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Nusa Tenggara"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 9,
+                        "nGempa": 27,
+                        "nKebakaran": 0,
+                        "provinsi": "Papua",
+                        "rugiBanjir": 49362000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 3,
+                        "nGempa": 4,
+                        "nKebakaran": 0,
+                        "provinsi": "Papua Barat",
+                        "rugiBanjir": 3320000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Papua"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 7,
+                        "nGempa": 6,
+                        "nKebakaran": 0,
+                        "provinsi": "Lampung",
+                        "rugiBanjir": 16973000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 15,
+                        "nGempa": 9,
+                        "nKebakaran": 0,
+                        "provinsi": "Sumatera Barat",
+                        "rugiBanjir": 524541000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 6,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Sumatera Selatan",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 20,
+                        "nGempa": 5,
+                        "nKebakaran": 0,
+                        "provinsi": "Sumatera Utara",
+                        "rugiBanjir": 91305000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 7,
+                        "nGempa": 14,
+                        "nKebakaran": 0,
+                        "provinsi": "Bengkulu",
+                        "rugiBanjir": 9380000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 8,
+                        "nGempa": 26,
+                        "nKebakaran": 1,
+                        "provinsi": "Aceh",
+                        "rugiBanjir": 661943000000,
+                        "rugiGempa": 454588000000,
+                        "rugiKebakaran": 336000000
+                    },
+                    {
+                        "nBanjir": 3,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Bangka Belitung",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 13,
+                        "nGempa": 0,
+                        "nKebakaran": 4,
+                        "provinsi": "Riau",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 333187050000
+                    },
+                    {
+                        "nBanjir": 15,
+                        "nGempa": 1,
+                        "nKebakaran": 0,
+                        "provinsi": "Jambi",
+                        "rugiBanjir": 315946000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Sumatera"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 10,
+                        "nGempa": 0,
+                        "nKebakaran": 1,
+                        "provinsi": "Kalimantan Tengah",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 168000000
+                    },
+                    {
+                        "nBanjir": 12,
+                        "nGempa": 0,
+                        "nKebakaran": 1,
+                        "provinsi": "Kalimantan Timur",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 840000000
+                    },
+                    {
+                        "nBanjir": 5,
+                        "nGempa": 0,
+                        "nKebakaran": 1,
+                        "provinsi": "Kalimantan Selatan",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 336000000
+                    },
+                    {
+                        "nBanjir": 1,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Utara",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 8,
+                        "nGempa": 0,
+                        "nKebakaran": 0,
+                        "provinsi": "Kalimantan Barat",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Kalimantan"
+            },
+            {
+                "dataProvinsi": [
+                    {
+                        "nBanjir": 0,
+                        "nGempa": 16,
+                        "nKebakaran": 0,
+                        "provinsi": "Maluku Utara",
+                        "rugiBanjir": 0,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    },
+                    {
+                        "nBanjir": 5,
+                        "nGempa": 40,
+                        "nKebakaran": 0,
+                        "provinsi": "Maluku",
+                        "rugiBanjir": 100935000000,
+                        "rugiGempa": 0,
+                        "rugiKebakaran": 0
+                    }
+                ],
+                "pulau": "Maluku"
+            }
+        ],
+        "tahun": "2013"
+    }
+]
