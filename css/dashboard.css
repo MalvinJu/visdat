@@ -224,9 +224,12 @@ body {
 }
 
 .carousel-control-next   {
-  
   height: 0% !important;
   margin : auto 0 !important;
+}
+
+.carousel-inner > .item > img {
+  width: 640px; height: 360px;
 }
 
 .carousel-button {
@@ -235,4 +238,21 @@ body {
   font-size: 30px;
   width : 45px;
   color: black;
+}
+
+.card-img {
+  max-height: auto;
+  width: 30%;
+  right: 1%;
+  bottom: 0px;
+  position: absolute;
+  z-index: 0;
+}
+
+.card-img2 {
+  max-height: auto;
+  width: 20%;
+  right: 4%;
+  bottom: 5px;
+  position: absolute;
 }
