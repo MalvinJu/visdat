@@ -79,7 +79,8 @@ markerMapArray.push([markerMapLabel]);
 var numRegionMapArray = [];
 var lossRegionMapArray = [];
 var regionMapLabel = [ {label: 'Province', id: 'Province', type: 'string'},
-												{label: 'Value', id: 'value', type: 'number'}];
+												{label: 'Value', id: 'value', type: 'number'},
+												{type:'string', role:'tooltip'}];
 numRegionMapArray.push(regionMapLabel);
 lossRegionMapArray.push(regionMapLabel);
 
@@ -143,7 +144,7 @@ function readData(yFrom, yTo, iName, dType) {
 									totalDisasterCount = numFlood + numQuake + numFFire;
 									totalLossCount = lossFlood + lossQuake + lossFFire;
 
-									numRegionMapData = [province, totalDisasterCount];
+									numRegionMapData = [province, totalDisasterCount, numFlood, numQuake, numFFire];
 
 									lossRegionMapData = [province, totalLossCount];
 
@@ -165,7 +166,7 @@ function readData(yFrom, yTo, iName, dType) {
 									totalDisasterCount = numFlood;
 									totalLossCount = lossFlood;
 
-									numRegionMapData = [province, totalDisasterCount];
+									numRegionMapData = [province, totalDisasterCount, numFlood, 0, 0];
 
 									lossRegionMapData = [province, totalLossCount];
 
@@ -185,7 +186,7 @@ function readData(yFrom, yTo, iName, dType) {
 									totalDisasterCount = numQuake;
 									totalLossCount = lossQuake;
 
-									numRegionMapData = [province, totalDisasterCount];
+									numRegionMapData = [province, totalDisasterCount, 0, numQuake, 0];
 
 									lossRegionMapData = [province, totalLossCount];
 
@@ -204,7 +205,7 @@ function readData(yFrom, yTo, iName, dType) {
 									totalDisasterCount = numFFire;
 									totalLossCount = lossFFire;
 
-									numRegionMapData = [province, totalDisasterCount];
+									numRegionMapData = [province, totalDisasterCount, 0, 0, numFFire];
 
 									lossRegionMapData = [province, totalLossCount];
 
@@ -223,7 +224,7 @@ function readData(yFrom, yTo, iName, dType) {
 									totalDisasterCount = numFlood + numQuake;
 									totalLossCount = lossFlood + lossQuake;
 
-									numRegionMapData = [province, totalDisasterCount];
+									numRegionMapData = [province, totalDisasterCount, numFlood, arrNumQuake, 0];
 
 									lossRegionMapData = [province, totalLossCount];
 
@@ -243,7 +244,7 @@ function readData(yFrom, yTo, iName, dType) {
 									totalDisasterCount = numFlood + numFFire;
 									totalLossCount = lossFlood + lossFFire;
 
-									numRegionMapData = [province, totalDisasterCount];
+									numRegionMapData = [province, totalDisasterCount, numFlood, 0, numFFire];
 
 									lossRegionMapData = [province, totalLossCount];
 
@@ -263,7 +264,7 @@ function readData(yFrom, yTo, iName, dType) {
 									totalDisasterCount = numQuake + numFFire;
 									totalLossCount = lossQuake + lossFFire;
 
-									numRegionMapData = [province, totalDisasterCount];
+									numRegionMapData = [province, totalDisasterCount, 0, numQuake, numFFire];
 
 									lossRegionMapData = [province, totalLossCount];
 
@@ -315,14 +316,30 @@ function readData(yFrom, yTo, iName, dType) {
 		for (i = 0; i < numRegionMapArrayDirty.length / (yTo - yFrom + 1); i++) {
 			pulau = numRegionMapArrayDirty[i][0];
 			totalDisasterDirty = 0
+			totalFloodDisaster = 0;
+			totalQuakeDisaster = 0;
+			totalFireDisaster = 0;
+			strTooltip = ""
 			for (j = 0; j < numRegionMapArrayDirty.length; j++) {
 					if (i != j) {
 						if (numRegionMapArrayDirty[i][0] == numRegionMapArrayDirty[j][0]) {
 							totalDisasterDirty += numRegionMapArrayDirty[j][1];
+							totalFloodDisaster += numRegionMapArrayDirty[j][2];
+							totalQuakeDisaster += numRegionMapArrayDirty[j][3];
+							totalFireDisaster += numRegionMapArrayDirty[j][4];
 						}
 					}
 			}
-			numRegionMapArray.push([pulau, totalDisasterDirty]);
+			if (totalFloodDisaster != 0) {
+				strTooltip += "Banjir: " + totalFloodDisaster + '\n'
+			}
+			if (totalQuakeDisaster != 0) {
+				strTooltip += "Gempa: " + totalQuakeDisaster + '\n'
+			}
+			if (totalFireDisaster != 0) {
+				strTooltip += "Kebakaran: " + totalFireDisaster + '\n'
+			}
+			numRegionMapArray.push([pulau, totalDisasterDirty, strTooltip]);
 		}
 		for (i = 0; i < lossRegionMapArrayDirty.length / (yTo - yFrom + 1); i++) {
 			pulau = lossRegionMapArrayDirty[i][0];
