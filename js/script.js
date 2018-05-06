@@ -328,6 +328,8 @@ function readData(yFrom, yTo, iName, dType) {
 		google.charts.setOnLoadCallback(function() {
 			drawPieChart(pieChartArray, blue, brown, yellow); 
 		});
+		$("#jumlah_bencana").text(numeral(sumDisasterCount).format('0,00 a'));
+		$("#kerugian").text(numeral(sumLossCount).format('$0.00 a'));
 	})
 }
 
@@ -390,7 +392,8 @@ function drawPieChart(array, color1, color2, color3) {
 	chart.draw(pieArray, options);
 }
 
-$("#mySidenav").change(function () {
+window.onload = function loadGraph() {
+	console.log("dfdfdf")
 	yFrom = Number($("#yearFrom option:selected").text());
 	yTo = Number($("#yearTo option:selected").text());
 	iName = $("#selectPulau option:selected" ).text();
@@ -411,8 +414,54 @@ $("#mySidenav").change(function () {
 						( isQuake ? 2 :  
 							( isFFire ? 3 : 1 ) ) ) ) ) ) );
 
-	$("#jumlah_bencana").text(numeral(sumDisasterCount).format('0,00 a'));
-	$("#kerugian").text(numeral(sumLossCount).format('$0.00 a'));
+	readData(yFrom, yTo, iName, dType);
+
+
+	$("#selectPulau option:selected" ).each(function() {
+  	var pulau = $(this).text();
+		$("#pulauName").text(truncateWithEllipses(pulau, 14));
+		$("#pulauName").attr('title', pulau);
+	});
+
+	$("#yearFrom option:selected" ).each(function() {
+		var yTo = Number($("#yearTo option:selected").text());
+		$("#yearTo option").remove();
+		var yFrom = Number($(this).text());;
+		for (i = yFrom; i <= yearMax; i++) {
+			if (i == yTo) {
+				$("#yearTo").append($("<option></option>").attr('selected', 'selected').text(i));
+			} else {
+				$("#yearTo").append($("<option></option>").text(i));
+			}
+		}
+		$('#tahunFrom').text(yFrom);
+	});
+	$("#yearTo option:selected").each(function() {
+		var yTo = Number($(this).text());
+		$('#tahunTo').text(yTo);
+	})
+};
+
+$("#mySidenav").change(function () {
+	yFrom = Number($("#yearFrom option:selected").text());
+	yTo = Number($("#yearTo option:selected").text());
+	iName = $("#selectPulau option:selected" ).text();
+	isFlood = false;
+	isQuake = false;
+	isFFire = false;
+	$("#disasterType:checkbox:checked").each(function() {
+		isFlood = ( $(this).text() == 'Banjir' || isFlood );
+		isQuake = ( $(this).text() == 'Gempa Bumi' || isQuake );
+		isFFire = ( $(this).text() == 'Kebakaran Hutan' || isFFire );
+	})
+
+	dType = ( (isFlood && isQuake && isFFire) ? 1 : 
+		( (isFlood && isQuake) ? 5 : 
+			( (isFlood && isFFire) ? 6 : 
+				( (isQuake && isFFire) ? 7 : 
+					( isFlood ? 1 : 
+						( isQuake ? 2 :  
+							( isFFire ? 3 : 1 ) ) ) ) ) ) );
 
 	readData(yFrom, yTo, iName, dType);
 
