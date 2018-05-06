@@ -99,6 +99,34 @@ var pieChartLabel = [ {label: 'Jenis Bencana', id: 'jenis', type: 'string'},
 												{label: 'Jumlah Kejadian', id: 'jumlah', type: 'number'} ];
 pieChartArray.push(pieChartLabel);
 
+//Carousal
+$('#mapCarousel').on('slide.bs.carousel', function () {
+  	yFrom = Number($("#yearFrom option:selected").text());
+	yTo = Number($("#yearTo option:selected").text());
+	iName = $("#selectPulau option:selected" ).text();
+	if (iName == "Bali dan Nusa Tenggara") {
+		iName = "Nusa Tenggara";
+	}
+	isFlood = false;
+	isQuake = false;
+	isFFire = false;
+	$("#disasterType:checkbox:checked").each(function() {
+		isFlood = ( $(this).text() == 'Banjir' || isFlood );
+		isQuake = ( $(this).text() == 'Gempa Bumi' || isQuake );
+		isFFire = ( $(this).text() == 'Kebakaran Hutan' || isFFire );
+	})
+
+	dType = ( (isFlood && isQuake && isFFire) ? 1 : 
+		( (isFlood && isQuake) ? 5 : 
+			( (isFlood && isFFire) ? 6 : 
+				( (isQuake && isFFire) ? 7 : 
+					( isFlood ? 1 : 
+						( isQuake ? 2 :  
+							( isFFire ? 3 : 1 ) ) ) ) ) ) );
+
+	readData(yFrom, yTo, iName, dType);
+})
+
 //PARSE
 function readData(yFrom, yTo, iName, dType) {
 	numRegionMapArray = [];
@@ -315,20 +343,18 @@ function readData(yFrom, yTo, iName, dType) {
 		}
 		for (i = 0; i < numRegionMapArrayDirty.length / (yTo - yFrom + 1); i++) {
 			pulau = numRegionMapArrayDirty[i][0];
-			totalDisasterDirty = 0
+			totalDisasterDirty = 0;
 			totalFloodDisaster = 0;
 			totalQuakeDisaster = 0;
 			totalFireDisaster = 0;
 			strTooltip = ""
 			for (j = 0; j < numRegionMapArrayDirty.length; j++) {
-					if (i != j) {
 						if (numRegionMapArrayDirty[i][0] == numRegionMapArrayDirty[j][0]) {
 							totalDisasterDirty += numRegionMapArrayDirty[j][1];
 							totalFloodDisaster += numRegionMapArrayDirty[j][2];
 							totalQuakeDisaster += numRegionMapArrayDirty[j][3];
 							totalFireDisaster += numRegionMapArrayDirty[j][4];
 						}
-					}
 			}
 			strTooltip += "Total: " + totalDisasterDirty + '\n'
 			if (totalFloodDisaster != 0) {
@@ -351,14 +377,13 @@ function readData(yFrom, yTo, iName, dType) {
 			totalFireDisaster = 0;
 			strTooltip = ""
 			for (j = 0; j < lossRegionMapArrayDirty.length; j++) {
-				if (i != j) {
 					if (lossRegionMapArrayDirty[i][0] == lossRegionMapArrayDirty[j][0]) {
 						totalLossDirty += lossRegionMapArrayDirty[j][1];
 						totalFloodDisaster += lossRegionMapArrayDirty[j][2];
 						totalQuakeDisaster += lossRegionMapArrayDirty[j][3];
 						totalFireDisaster += lossRegionMapArrayDirty[j][4];
 					}
-				}
+				
 			}
 			strTooltip += "Total: " + totalDisasterDirty + '\n'
 			if (totalFloodDisaster != 0) {
