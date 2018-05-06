@@ -1,13 +1,35 @@
+var tBencana = ["Banjir", "Gempa Bumi", "Kebakaran Hutan"];
+var blue = '#384ba0';
+var brown = '#b25728';
+var yellow ='#f3b31e';
+var black = '#0f0f0f';
+
 function openNav() {
-		document.getElementById("mySidenav").style.width = "300px";
-		document.getElementById("main").style.marginRight = "300px";
-		document.body.style.backgroundColor = "#f8f9fa";
+	document.getElementById("mySidenav").style.width = "300px";
+	document.getElementById("main").style.marginRight = "300px";
+	$(".legend").each( function() {
+		var text = $(this).text();
+		var newText = truncateWithEllipses(text, 6);
+		$(this).text(newText);
+	});
+	t = $("#pulauName").text();
+	$("#pulauName").text(truncateWithEllipses(t, 14));
+	$("#pulauName").attr('title', t);
 }
 
 function closeNav() {
-		document.getElementById("mySidenav").style.width = "0";
-		document.getElementById("main").style.marginRight= "0";
-		document.body.style.backgroundColor = "white";
+	document.getElementById("mySidenav").style.width = "0";
+	document.getElementById("main").style.marginRight= "0";
+	$(".sidenav").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
+    function(e) {
+    	$(".legend").each( function() {
+				t = $(this).attr('title');
+				$(this).text(truncateWithEllipses(t, 15));
+			});
+			t2 = $("#pulauName").attr('title');
+			$("#pulauName").text(t2);
+			$("#pulauName").removeAttr('title');
+    })
 }
 
 function getJSONBanjir() {
@@ -26,6 +48,12 @@ function getJSONPulau() {
 	return $.getJSON('https://raw.githubusercontent.com/MalvinJu/visdat/master/data/tespulau.json');
 }
 
+//LEGEND ELLIPSIS
+function truncateWithEllipses(text, max) {
+	return text.substr(0, max).trim() + (text.length > max ? '...' : '');
+}
+
+//NUMBER FORMAT
 numeral.register('locale', 'id', {
     delimiters: {
         thousands: '.',
@@ -44,8 +72,6 @@ numeral.register('locale', 'id', {
         symbol: 'Rp '
     }
 });
-
-// switch between locales
 numeral.locale('id');
 
 //MAP
@@ -54,14 +80,24 @@ var label = [ {label: 'LATITUDE', id: 'Latitude', type: 'number'},
 							{label: 'LONGITUDE', id: 'Longitude', type: 'number'},
 							{label: 'DESCRIPTION', id: 'Description', type: 'string'},
 							{label: 'VALUE', id: 'value', type: 'number'}];
-arrayMapData.push(label);
+arrayMapData.push([label]);
 
-var arrayCloroData = [];
-var label1 = ['Province', 'nBanjir', 'nGempa', 'nKebakaran'];
-arrayCloroData.push(label1);
+var arrayBanjirData = [];
+arrayBanjirData.push(['Province', 'nBanjir']);
+var arrayGempaData = [];
+arrayGempaData.push(['Province', 'nGempa']);
+var arrayKebakaranData = [];
+arrayKebakaranData.push(['Province', 'nKebakaran']);
+
+var arrayBGData = [];
+arrayBGData.push(['Province', 'nBG']);
+var arrayBKData = [];
+arrayBKData.push(['Province', 'nBK']);
+var arrayGKData = [];
+arrayGKData.push(['Province', 'nGK']);
+
 var arrayTotalData = [];
-var label2 = ['Province', 'nBencana'];
-arrayTotalData.push(label2);
+arrayTotalData.push(['Province', 'nBencana']);
 
 $.when(getJSONBanjir()).then(function (dataBanjir) {
 	$.each(dataBanjir, function(i, f) {   
@@ -83,78 +119,33 @@ $.when(getJSONKebakaran()).then(function (dataKebakaran) {
 });
 $.when(getJSONPulau()).then(function (data) {
 	$.each(data, function(i, f) {
-		if(data != undefined && f.dataProvinsi != undefined){
-			nBencana = 0
-			nBanjir = 0
-			nGempa = 0
-			nKebakaran = 0
+		if(data != undefined && f.dataProvinsi != undefined) {
 			$.each(f.dataProvinsi, function (j, perPulau){
 				nBanjir = parseFloat(perPulau.nBanjir)
 				nGempa = parseFloat(perPulau.nGempa)
 				nKebakaran = parseFloat(perPulau.nKebakaran)
+				nBG = nBanjir + nGempa
+				nBK = nBanjir + nKebakaran
+				nGK = nGempa + nKebakaran
 				nBencana = nBanjir + nGempa + nKebakaran
-				clorodata = [perPulau.provinsi, nBanjir, nGempa, nKebakaran]
+				banjirdata = [perPulau.provinsi, nBanjir]
+				gempadata = [perPulau.provinsi, nGempa]
+				kebakarandata = [perPulau.provinsi, nKebakaran]
+				bgdata = [perPulau.provinsi, nBG]
+				bkdata = [perPulau.provinsi, nBK]
+				gkdata = [perPulau.provinsi, nGK]
 				totaldata = [perPulau.provinsi, nBencana]
-				arrayCloroData.push(clorodata);
+				arrayBanjirData.push(banjirdata);
+				arrayGempaData.push(gempadata);
+				arrayKebakaranData.push(kebakarandata);
+				arrayBGData.push(bgdata);
+				arrayBKData.push(bkdata);
+				arrayGKData.push(gkdata);
 				arrayTotalData.push(totaldata);
 			})
 		}
 	})
 });
-
-google.charts.load('current', {
-		'packages':['geochart'],
-		'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
-});
-google.charts.setOnLoadCallback(drawTotalMap);
-
-function drawScatterMap() {
-	var x = google.visualization.arrayToDataTable(arrayMapData);
-
-	var options = {
-		region: 'ID',
-		displayMode: 'markers',
-		zoomLevel: 4,
-		sizeAxis: { minValue: -2, maxValue: 5, minSize: 1, maxSize: 5},
-		legend: 'none',
-		colorAxis: {colors: ['#808080']}
-	};
-
-	var chart = new google.visualization.GeoChart(document.getElementById('map'));
-	chart.draw(x, options);
-};
-
-function drawCloroMap() {
-	var x = google.visualization.arrayToDataTable(arrayCloroData);
-
-	var options = {
-		region: 'ID',
-		resolution: 'provinces',
-		zoomLevel: 4,
-		legend: 'none',
-		colorAxis: {colors: ['#384ba0','#b25728','#f3b31e']}
-	};
-
-	var chart = new google.visualization.GeoChart(document.getElementById('map'));
-	chart.draw(x, options);
-};
-
-function drawTotalMap() {
-	var x = google.visualization.arrayToDataTable(arrayTotalData);
-
-	var options = {
-		region: 'ID',
-		resolution: 'provinces',
-		sizeAxis: {minValue: 0, maxValue: 300},
-		colorAxis: {colors: [ '#f8f8f8', '#0f0f0f' ]},
-		backgroundColor: '#fdfdfd',
-		datalessRegionColor: '#ffffff',
-		defaultColor: '#f5f5f5',
-	};
-
-	var chart = new google.visualization.GeoChart(document.getElementById('map'));
-	chart.draw(x, options);
-};
 
 //NUMBERS
 var totalBencanaJawa = 0, totalKerugianJawa = 0;
@@ -333,15 +324,49 @@ $.when(getJSONPulau()).then(function (data) {
 		}
 	});
 
-	document.getElementById("jumlah_bencana").innerHTML = numeral(totalBencanaJawa).format('0,00 a');
-	document.getElementById("kerugian").innerHTML = numeral(totalKerugianJawa).format('$0.00 a');
+	$("#jumlah_bencana").text(numeral(totalBencanaJawa).format('0,00 a'));
+	$("#kerugian").text(numeral(totalKerugianJawa).format('$0.00 a'));
 });
 
 google.charts.load('current', {
-	'packages':['corechart'],
+	'packages':['geochart', 'corechart'],
+	'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
 });
 
+google.charts.setOnLoadCallback(function() {drawRegionMap(arrayTotalData, black); });
 google.charts.setOnLoadCallback(function() {drawBarChart(arrayBarJawa, 'Jawa'); });
+google.charts.setOnLoadCallback(function() {drawPieChart(arrayPieJawa, 'Jawa'); });
+
+function drawPlotMap() {
+	var x = google.visualization.arrayToDataTable(arrayMapData);
+
+	var options = {
+		region: 'ID',
+		displayMode: 'markers',
+		zoomLevel: 4,
+		sizeAxis: { minValue: -2, maxValue: 5, minSize: 1, maxSize: 5},
+		legend: 'none',
+		colorAxis: {colors: ['#808080']}
+	};
+
+	var chart = new google.visualization.GeoChart(document.getElementById('map'));
+	chart.draw(x, options);
+};
+
+function drawRegionMap(array, color) {
+	var x = google.visualization.arrayToDataTable(array);
+
+	var options = {
+		region: 'ID',
+		resolution: 'provinces',
+		colorAxis: {colors: [ '#f8f8f8', color ]},
+		backgroundColor: { fill: '#ffffff', stroke: '#ffffff' },
+		datalessRegionColor: '#ffffff',
+		defaultColor: '#f5f5f5',
+	};
+	var chart = new google.visualization.GeoChart(document.getElementById('map'));
+	chart.draw(x, options);
+};
 
 function drawBarChart(array, name) {
 	var data = google.visualization.arrayToDataTable(array);
@@ -349,75 +374,74 @@ function drawBarChart(array, name) {
 	var options = {
 		legend: 'none',
 		isStacked: 'true',
+		backgroundColor: '#fdfdfd',
 		colors:['#384ba0','#b25728','#f3b31e']
 	};
  var chart = new google.visualization.BarChart(document.getElementById('barchart'));
 	chart.draw(data, options);
 }
 
-google.charts.setOnLoadCallback(function() {drawPieChart(arrayPieJawa, 'Jawa'); });
-
 function drawPieChart(array,name) {
 	var data = google.visualization.arrayToDataTable(array);
 
 	var options = {
 		legend: 'none',
+		backgroundColor: '#fdfdfd',
 		colors:['#384ba0','#b25728','#f3b31e']
 	};
 	var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 	chart.draw(data, options);
 }
 
+var yearMin = 2011;
+var yearMax = 2014;
+
 $("#mySidenav").change(function () {
 	$("#selectPulau option:selected" ).each(function() {
   	var pulau = $(this).text();
+		$("#pulauName").text(truncateWithEllipses(pulau, 14));
+		$("#pulauName").attr('title', pulau);
   	switch (pulau) {
   		case 'Jawa':
-  			document.getElementById("pulauName").innerHTML = "Jawa";
-  			document.getElementById("jumlah_bencana").innerHTML = numeral(totalBencanaJawa).format('0,00 a');
-				document.getElementById("kerugian").innerHTML = numeral(totalKerugianJawa).format('$0.00 a');
+  			$("#jumlah_bencana").text(numeral(totalBencanaJawa).format('0,00 a'));
+				$("#kerugian").text(numeral(totalKerugianJawa).format('$0.00 a'));
   			google.charts.setOnLoadCallback(function() {drawBarChart(arrayBarJawa, 'Jawa'); });
   			google.charts.setOnLoadCallback(function() {drawPieChart(arrayPieJawa, 'Jawa'); });
+				google.charts.setOnLoadCallback(function() {drawRegionMap(arrayTotalData, black); });
   			break;
   		case 'Kalimantan':
-  			document.getElementById("pulauName").innerHTML = "Kalimantan";
-  			document.getElementById("jumlah_bencana").innerHTML = numeral(totalBencanaKalimantan).format('0,00 a');
-				document.getElementById("kerugian").innerHTML = numeral(totalKerugianKalimantan).format('$0.00 a');
+  			$("#jumlah_bencana").text(numeral(totalBencanaKalimantan).format('0,00 a'));
+				$("#kerugian").text(numeral(totalKerugianKalimantan).format('$0.00 a'));
   			google.charts.setOnLoadCallback(function() {drawBarChart(arrayBarKalimantan, 'Kalimantan'); });
   			google.charts.setOnLoadCallback(function() {drawPieChart(arrayPieKalimantan, 'Kalimantan'); });
   			break;
   		case 'Maluku':
-  			document.getElementById("pulauName").innerHTML = "Maluku";
-  			document.getElementById("jumlah_bencana").innerHTML = numeral(totalBencanaMaluku).format('0,00 a');
-				document.getElementById("kerugian").innerHTML = numeral(totalKerugianMaluku).format('$0.00 a');
+  			$("#jumlah_bencana").text(numeral(totalBencanaMaluku).format('0,00 a'));
+				$("#kerugian").text(numeral(totalKerugianMaluku).format('$0.00 a'));
   			google.charts.setOnLoadCallback(function() {drawBarChart(arrayBarMaluku, 'Maluku'); });
   			google.charts.setOnLoadCallback(function() {drawPieChart(arrayPieMaluku, 'Maluku'); });
   			break;
   		case 'Bali dan Nusa Tenggara':
-  			document.getElementById("pulauName").innerHTML = "Bali dan Nusa Tenggara";
-  			document.getElementById("jumlah_bencana").innerHTML = numeral(totalBencanaNT).format('0,00 a');
-  			document.getElementById("kerugian").innerHTML = numeral(totalKerugianNT).format('$0.00 a');
+  			$("#jumlah_bencana").text(numeral(totalBencanaNT).format('0,00 a'));
+  			$("#kerugian").text(numeral(totalKerugianNT).format('$0.00 a'));
   			google.charts.setOnLoadCallback(function() {drawBarChart(arrayBarNT, 'NT'); });
   			google.charts.setOnLoadCallback(function() {drawPieChart(arrayPieNT, 'NT'); });
   			break;
   		case 'Papua':
-  			document.getElementById("pulauName").innerHTML = "Papua";
-  			document.getElementById("jumlah_bencana").innerHTML = numeral(totalBencanaPapua).format('0,00 a');
-  			document.getElementById("kerugian").innerHTML = numeral(totalKerugianPapua).format('$0.00 a');
+  			$("#jumlah_bencana").text(numeral(totalBencanaPapua).format('0,00 a'));
+  			$("#kerugian").text(numeral(totalKerugianPapua).format('$0.00 a'));
   			google.charts.setOnLoadCallback(function() {drawBarChart(arrayBarPapua, 'Papua'); });
   			google.charts.setOnLoadCallback(function() {drawPieChart(arrayPiePapua, 'Papua'); });
   			break;
   		case 'Sulawesi':
-  			document.getElementById("pulauName").innerHTML = "Sulawesi";
-  			document.getElementById("jumlah_bencana").innerHTML = numeral(totalBencanaSulawesi).format('0,00 a');
-  			document.getElementById("kerugian").innerHTML = numeral(totalKerugianSulawesi).format('$0.00 a');
+  			$("#jumlah_bencana").text(numeral(totalBencanaSulawesi).format('0,00 a'));
+  			$("#kerugian").text(numeral(totalKerugianSulawesi).format('$0.00 a'));
   			google.charts.setOnLoadCallback(function() {drawBarChart(arrayBarSulawesi, 'Sulawesi'); });
   			google.charts.setOnLoadCallback(function() {drawPieChart(arrayPieSulawesi, 'Sulawesi'); });
   			break;
   		case 'Sumatera':
-  			document.getElementById("pulauName").innerHTML = "Sumatera";
-  			document.getElementById("jumlah_bencana").innerHTML = numeral(totalBencanaSumatera).format('0,00 a');
-  			document.getElementById("kerugian").innerHTML = numeral(totalKerugianSumatera).format('$0.00 a');
+  			$("#jumlah_bencana").text(numeral(totalBencanaSumatera).format('0,00 a'));
+  			$("#kerugian").text(numeral(totalKerugianSumatera).format('$0.00 a'));
   			google.charts.setOnLoadCallback(function() {drawBarChart(arrayBarSumatera, 'Sumatera'); });
   			google.charts.setOnLoadCallback(function() {drawPieChart(arrayPieSumatera, 'Sumatera'); });
   			break;
@@ -428,4 +452,21 @@ $("#mySidenav").change(function () {
 
 		})
 	});
+	$("#yearFrom option:selected" ).each(function() {
+		var yTo = Number($("#yearTo option:selected").text());
+		$("#yearTo option").remove();
+		var yFrom = Number($(this).text());;
+		for (i = yFrom; i <= yearMax; i++) {
+			if (i == yTo) {
+				$("#yearTo").append($("<option></option>").attr('selected', 'selected').text(i));
+			} else {
+				$("#yearTo").append($("<option></option>").text(i));
+			}
+		}
+		$('#tahunFrom').text(yFrom);
+	});
+	$("#yearTo option:selected").each(function() {
+		var yTo = Number($(this).text());
+		$('#tahunTo').text(yTo);
+	})
 });
