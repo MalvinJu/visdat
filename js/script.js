@@ -4,7 +4,7 @@ var brown = '#b25728';
 var yellow ='#f3b31e';
 var black = '#0f0f0f';
 var grey = '#fdfdfd';
-var yearMin = 2011;
+var yearMin = 2010;
 var yearMax = 2014;
 
 function openNav() {
@@ -102,6 +102,7 @@ pieChartArray.push(pieChartLabel);
 //PARSE
 function readData(yFrom, yTo, iName, dType) {
 	numRegionMapArray = [];
+	numRegionMapArrayDirty = [];
 	lossRegionMapArray = [];
 	numRegionMapArray.push(regionMapLabel);
 	lossRegionMapArray.push(regionMapLabel);
@@ -110,24 +111,23 @@ function readData(yFrom, yTo, iName, dType) {
 	barChartArrayDirty = [];
 	pieChartArray = [];
 	pieChartArray.push(pieChartLabel);
-	console.log(yFrom);
-	console.log(yTo);
-	console.log(iName);
-	console.log(dType);
+	sumDisasterCount = 0;
+	sumLossCount = 0;
 	$.when(readDataFile()).then(function (data) {
 		$.each(data, function(yKey, yVal) {
 			year = yVal.tahun;
-			sumDisasterCount = 0;
-			sumLossCount = 0;
+			totalLossFlood = 0
+			totalLossQuake = 0
+			totalLossFire = 0
+			totalNumFlood = 0;
+			totalNumQuake = 0;
+			totalNumFFire = 0;
 			if (year >= yFrom && year <= yTo) {
 				$.each(yVal.dataPulau, function(iKey, iVal) {
 					pulau = iVal.pulau;
-					totalLossFlood = 0
-					totalLossQuake = 0
-					totalLossFire = 0
-					totalNumFlood = 0;
-					totalNumQuake = 0;
-					totalNumFFire = 0;
+					numRegionMapData = [];
+					lossRegionMapData = [];
+					barChartData = [];
 					if (iName == pulau || iName == "Seluruh Indonesia") {
 						$.each(iVal.dataProvinsi, function(pKey, pVal) {
 							province = pVal.provinsi;
@@ -137,9 +137,6 @@ function readData(yFrom, yTo, iName, dType) {
 							lossFlood = Number(pVal.rugiBanjir);
 							lossQuake = Number(pVal.rugiGempa);
 							lossFFire = Number(pVal.rugiKebakaran);
-							numRegionMapData = [];
-							lossRegionMapData = [];
-							barChartData = [];
 							
 							switch (dType) { 
 								case 1:
@@ -282,13 +279,12 @@ function readData(yFrom, yTo, iName, dType) {
 									sumLossCount += totalLossCount;
 									break;
 							}
-							numRegionMapArray.push(numRegionMapData);
+							numRegionMapArrayDirty.push(numRegionMapData);
 							lossRegionMapArray.push(lossRegionMapData);
 							if (iName == pulau) {
 								barChartArrayDirty.push(barChartData);
 							}
 						})
-						
 					}
 					if (iName == "Seluruh Indonesia") {
 						barChartArrayDirty.push([pulau, totalLossFlood, totalLossQuake, totalLossFire]);
@@ -311,24 +307,32 @@ function readData(yFrom, yTo, iName, dType) {
 		    	if (i != j) {
 		    		if (barChartArrayDirty[i][0] == barChartArrayDirty[j][0]) {
 		    			totalLossFire += barChartArrayDirty[j][3];
-						totalLossQuake += barChartArrayDirty[j][2];
-						totalLossFlood += barChartArrayDirty[j][1];
+							totalLossQuake += barChartArrayDirty[j][2];
+							totalLossFlood += barChartArrayDirty[j][1];
 		    		}
 		    	}
 			}
 			barChartArray.push([pulau, totalLossFlood, totalLossQuake, totalLossFire]);
 		}
-		console.log(pieChartArray) 
+		for (i = 0; i < numRegionMapArrayDirty.length/(yTo-yFrom+1); i++) {
+			pulau = numRegionMapArrayDirty[i][0];
+			totalDisasterDirty = 0
+			for (j = 0; j < numRegionMapArrayDirty.length; j++) {
+		    	if (i != j) {
+		    		if (numRegionMapArrayDirty[i][0] == numRegionMapArrayDirty[j][0]) {
+		    			totalDisasterDirty += numRegionMapArrayDirty[j][1];
+		    		}
+		    	}
+			}
+			numRegionMapArray.push([pulau, totalDisasterDirty]);
+		}
+		console.log(numRegionMapArray) 
 		google.charts.setOnLoadCallback(function() {
 			drawRegionMap(numRegionMapArray, black);
-		});
-		google.charts.setOnLoadCallback(function() {
 			drawBarChart(barChartArray);
-		});
-		google.charts.setOnLoadCallback(function() {
 			drawPieChart(pieChartArray, blue, brown, yellow); 
 		});
-		$("#jumlah_bencana").text(numeral(sumDisasterCount).format('0,00 a'));
+		$("#jumlah_bencana").text(numeral(sumDisasterCount).format('0,00') + ' kejadian');
 		$("#kerugian").text(numeral(sumLossCount).format('$0.00 a'));
 	})
 }
@@ -337,8 +341,6 @@ google.charts.load('current', {
 	'packages':['geochart', 'corechart'],
 	'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
 });
-
-
 
 function drawPlotMap() {
 	var x = google.visualization.arrayToDataTable(arrayMapData);
@@ -362,6 +364,7 @@ function drawRegionMap(array, color) {
 	var options = {
 		region: 'ID',
 		resolution: 'provinces',
+		datalessRegionColor: '#ffffff',
 		colorAxis: {colors: [ '#f8f8f8', color ]}
 	};
 	var chart = new google.visualization.GeoChart(document.getElementById('map'));
@@ -393,10 +396,12 @@ function drawPieChart(array, color1, color2, color3) {
 }
 
 window.onload = function loadGraph() {
-	console.log("dfdfdf")
 	yFrom = Number($("#yearFrom option:selected").text());
 	yTo = Number($("#yearTo option:selected").text());
 	iName = $("#selectPulau option:selected" ).text();
+	if (iName == "Bali dan Nusa Tenggara") {
+		iName = "Nusa Tenggara";
+	}
 	isFlood = false;
 	isQuake = false;
 	isFFire = false;
@@ -415,37 +420,15 @@ window.onload = function loadGraph() {
 							( isFFire ? 3 : 1 ) ) ) ) ) ) );
 
 	readData(yFrom, yTo, iName, dType);
-
-
-	$("#selectPulau option:selected" ).each(function() {
-  	var pulau = $(this).text();
-		$("#pulauName").text(truncateWithEllipses(pulau, 14));
-		$("#pulauName").attr('title', pulau);
-	});
-
-	$("#yearFrom option:selected" ).each(function() {
-		var yTo = Number($("#yearTo option:selected").text());
-		$("#yearTo option").remove();
-		var yFrom = Number($(this).text());;
-		for (i = yFrom; i <= yearMax; i++) {
-			if (i == yTo) {
-				$("#yearTo").append($("<option></option>").attr('selected', 'selected').text(i));
-			} else {
-				$("#yearTo").append($("<option></option>").text(i));
-			}
-		}
-		$('#tahunFrom').text(yFrom);
-	});
-	$("#yearTo option:selected").each(function() {
-		var yTo = Number($(this).text());
-		$('#tahunTo').text(yTo);
-	})
 };
 
 $("#mySidenav").change(function () {
 	yFrom = Number($("#yearFrom option:selected").text());
 	yTo = Number($("#yearTo option:selected").text());
 	iName = $("#selectPulau option:selected" ).text();
+	if (iName == "Bali dan Nusa Tenggara") {
+		iName = "Nusa Tenggara";
+	}
 	isFlood = false;
 	isQuake = false;
 	isFFire = false;
@@ -456,15 +439,14 @@ $("#mySidenav").change(function () {
 	})
 
 	dType = ( (isFlood && isQuake && isFFire) ? 1 : 
-		( (isFlood && isQuake) ? 5 : 
-			( (isFlood && isFFire) ? 6 : 
-				( (isQuake && isFFire) ? 7 : 
-					( isFlood ? 1 : 
-						( isQuake ? 2 :  
-							( isFFire ? 3 : 1 ) ) ) ) ) ) );
+						( (isFlood && isQuake) ? 5 : 
+							( (isFlood && isFFire) ? 6 : 
+								( (isQuake && isFFire) ? 7 : 
+									( isFlood ? 1 : 
+										( isQuake ? 2 :  
+											( isFFire ? 3 : 1 ) ) ) ) ) ) );
 
 	readData(yFrom, yTo, iName, dType);
-
 
 	$("#selectPulau option:selected" ).each(function() {
   	var pulau = $(this).text();
