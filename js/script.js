@@ -3,7 +3,7 @@ var blue = '#384ba0';
 var brown = '#b25728';
 var yellow ='#f3b31e';
 var black = '#0f0f0f';
-var grey = '#fdfdfd';
+var grey = '#b2b2b2';
 var yearMin = 2010;
 var yearMax = 2014;
 
@@ -502,7 +502,7 @@ $("#mySidenav").change(function () {
 								( (isQuake && isFFire) ? 7 : 
 									( isFlood ? 2 : 
 										( isQuake ? 3 :  
-											( isFFire ? 4 : 1 ) ) ) ) ) ) );
+											( isFFire ? 4 : 0 ) ) ) ) ) ) );
 	readData(yFrom, yTo, iName, dType);
 
 	$("#selectPulau option:selected" ).each(function() {

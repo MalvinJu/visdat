@@ -216,3 +216,23 @@ body {
   border-width: 0;
   box-shadow: 1px 1px 8px 2px #f3f3f3;
 }
+
+
+.carousel-control-prev {
+  height: 0% !important;
+  margin : auto 0 !important;
+}
+
+.carousel-control-next   {
+  
+  height: 0% !important;
+  margin : auto 0 !important;
+}
+
+.carousel-button {
+  box-shadow: 1px 1px 8px 2px #b5b5b5b5; 
+  border-radius: 100%;
+  font-size: 30px;
+  width : 45px;
+  color: black;
+}
