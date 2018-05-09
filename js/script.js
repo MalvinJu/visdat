@@ -101,29 +101,23 @@ pieChartArray.push(pieChartLabel);
 
 //Carousal
 $('#mapCarousel').on('slide.bs.carousel', function () {
-  yFrom = Number($("#yearFrom option:selected").text());
+	yFrom = Number($("#yearFrom option:selected").text());
 	yTo = Number($("#yearTo option:selected").text());
 	iName = $("#selectPulau option:selected" ).text();
 	if (iName == "Bali dan Nusa Tenggara") {
 		iName = "Nusa Tenggara";
 	}
-	isFlood = false;
-	isQuake = false;
-	isFFire = false;
-	$("#disasterType:checkbox:checked").each(function() {
-		isFlood = ( $(this).text() == 'Banjir' || isFlood );
-		isQuake = ( $(this).text() == 'Gempa Bumi' || isQuake );
-		isFFire = ( $(this).text() == 'Kebakaran Hutan' || isFFire );
-	})
+	isFlood = ( $('#banjir').attr('name') == 'banjir' && $('#banjir').is(':checked'));
+	isQuake = ( $('#gempabumi').attr('name') == 'gempabumi' && $('#gempabumi').is(':checked'));
+	isFFire = ( $('#kebakaran').attr('name') == 'kebakaran' && $('#kebakaran').is(':checked'));
 
 	dType = ( (isFlood && isQuake && isFFire) ? 1 : 
-		( (isFlood && isQuake) ? 5 : 
-			( (isFlood && isFFire) ? 6 : 
-				( (isQuake && isFFire) ? 7 : 
-					( isFlood ? 1 : 
-						( isQuake ? 2 :  
-							( isFFire ? 3 : 1 ) ) ) ) ) ) );
-
+						( (isFlood && isQuake) ? 5 : 
+							( (isFlood && isFFire) ? 6 : 
+								( (isQuake && isFFire) ? 7 : 
+									( isFlood ? 2 : 
+										( isQuake ? 3 :  
+											( isFFire ? 4 : 0 ) ) ) ) ) ) );
 	readData(yFrom, yTo, iName, dType);
 })
 
@@ -252,7 +246,7 @@ function readData(yFrom, yTo, iName, dType) {
 									totalDisasterCount = numFlood + numQuake;
 									totalLossCount = lossFlood + lossQuake;
 
-									numRegionMapData = [province, totalDisasterCount, numFlood, arrNumQuake, 0];
+									numRegionMapData = [province, totalDisasterCount, numFlood, numQuake, 0];
 
 									lossRegionMapData = [province, totalLossCount, lossFlood, lossQuake, 0];
 
@@ -356,19 +350,18 @@ function readData(yFrom, yTo, iName, dType) {
 							totalFireDisaster += numRegionMapArrayDirty[j][4];
 						}
 			}
-			strTooltip += "Total: " + totalDisasterDirty + '\n'
+			strTooltip += "Total: " + totalDisasterDirty
 			if (totalFloodDisaster != 0) {
-				strTooltip += "Banjir: " + totalFloodDisaster + '\n'
+				strTooltip += "\nBanjir: " + totalFloodDisaster
 			}
 			if (totalQuakeDisaster != 0) {
-				strTooltip += "Gempa: " + totalQuakeDisaster + '\n'
+				strTooltip += "\nGempa: " + totalQuakeDisaster
 			}
 			if (totalFireDisaster != 0) {
-				strTooltip += "Kebakaran: " + totalFireDisaster + '\n'
+				strTooltip += "\nKebakaran: " + totalFireDisaster
 			}
 			numRegionMapArray.push([pulau, totalDisasterDirty, strTooltip]);
 		}
-		console.log(lossRegionMapArrayDirty)
 		for (i = 0; i < lossRegionMapArrayDirty.length / (yTo - yFrom + 1); i++) {
 			pulau = lossRegionMapArrayDirty[i][0];
 			totalLossDirty = 0;
@@ -385,19 +378,18 @@ function readData(yFrom, yTo, iName, dType) {
 					}
 				
 			}
-			strTooltip += "Total: " + totalDisasterDirty + '\n'
+			strTooltip += "Total: " + shortenNum(totalDisasterDirty, '0.00 a')
 			if (totalFloodDisaster != 0) {
-				strTooltip += "Banjir: " + totalFloodDisaster + '\n'
+				strTooltip += "\nBanjir: " + shortenNum(totalFloodDisaster, '0.00 a')
 			}
 			if (totalQuakeDisaster != 0) {
-				strTooltip += "Gempa: " + totalQuakeDisaster + '\n'
+				strTooltip += "\nGempa: " + shortenNum(totalQuakeDisaster, '0.00 a')
 			}
 			if (totalFireDisaster != 0) {
-				strTooltip += "Kebakaran: " + totalFireDisaster + '\n'
+				strTooltip += "\nKebakaran: " + shortenNum(totalFireDisaster, '0.00 a')
 			}
 			lossRegionMapArray.push([pulau, totalLossDirty, strTooltip]);
 		}
-		console.log(lossRegionMapArray)
 		switch (dType) {
 			case 1 :
 				google.charts.setOnLoadCallback(function() {
@@ -455,16 +447,23 @@ function readData(yFrom, yTo, iName, dType) {
 					drawPieChart(pieChartArray, grey, brown, yellow); 
 				});
 				break;
-			
+			case 0:
+				alert("Mohon memilih minimal 1 jenis bencana");
+				break;
 		}
-		$("#jumlah_bencana").text(numeral(sumDisasterCount).format('0,00') + ' kejadian');
-		$("#kerugian").text(numeral(sumLossCount).format('$0.00 a'));
+		$("#jumlah_bencana").text(shortenNum(sumDisasterCount,'0,00') + ' kejadian');
+		$("#kerugian").text(shortenNum(sumLossCount,'$0.00 a'));
 	})
 }
 
-google.charts.load('current', {
+function shortenNum(number, format) {
+	return numeral(number).format(format);
+}
+
+google.charts.load('visualization', '1', {
 	'packages':['geochart', 'corechart'],
-	'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+	'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY',
+	'language': 'id'
 });
 
 function drawPlotMap() {
@@ -489,9 +488,17 @@ function drawRegionMap(array, color, id) {
 	var options = {
 		region: 'ID',
 		resolution: 'provinces',
+		legend: {numberFormat: 'short'},
+		tooltip: {
+			textStyle: {
+				fontName: 'Open Sans',
+				fontSize: 14,
+			}
+		},
 		datalessRegionColor: '#ffffff',
 		colorAxis: {colors: [ '#f8f8f8', color ]}
 	};
+
 	var chart = new google.visualization.GeoChart(document.getElementById(id));
 	chart.draw(mapArray, options);
 };
@@ -502,6 +509,12 @@ function drawBarChart(array) {
 	var options = {
 		legend: 'none',
 		isStacked: 'true',
+		tooltip: {
+			textStyle: {
+				fontName: 'Open Sans',
+				fontSize: 12,
+			}
+		},
 		colors:[ blue , brown, yellow ]
 	};
  var chart = new google.visualization.BarChart(document.getElementById('barchart'));
@@ -513,6 +526,12 @@ function drawPieChart(array, color1, color2, color3) {
 
 	var options = {
 		legend: 'none',
+		tooltip: {
+			textStyle: {
+				fontName: 'Open Sans',
+				fontSize: 12,
+			}
+		},
 		colors:[ color1, color2, color3 ]
 	};
 	var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -520,33 +539,6 @@ function drawPieChart(array, color1, color2, color3) {
 }
 
 window.onload = function loadGraph() {
-	yFrom = Number($("#yearFrom option:selected").text());
-	yTo = Number($("#yearTo option:selected").text());
-	iName = $("#selectPulau option:selected" ).text();
-	if (iName == "Bali dan Nusa Tenggara") {
-		iName = "Nusa Tenggara";
-	}
-	isFlood = false;
-	isQuake = false;
-	isFFire = false;
-	$("#disasterType:checkbox:checked").each(function() {
-		isFlood = ( $(this).text() == 'Banjir' || isFlood );
-		isQuake = ( $(this).text() == 'Gempa Bumi' || isQuake );
-		isFFire = ( $(this).text() == 'Kebakaran Hutan' || isFFire );
-	})
-
-	dType = ( (isFlood && isQuake && isFFire) ? 1 : 
-		( (isFlood && isQuake) ? 5 : 
-			( (isFlood && isFFire) ? 6 : 
-				( (isQuake && isFFire) ? 7 : 
-					( isFlood ? 1 : 
-						( isQuake ? 2 :  
-							( isFFire ? 3 : 1 ) ) ) ) ) ) );
-
-	readData(yFrom, yTo, iName, dType);
-};
-
-$("#mySidenav").change(function () {
 	yFrom = Number($("#yearFrom option:selected").text());
 	yTo = Number($("#yearTo option:selected").text());
 	iName = $("#selectPulau option:selected" ).text();
@@ -565,7 +557,9 @@ $("#mySidenav").change(function () {
 										( isQuake ? 3 :  
 											( isFFire ? 4 : 0 ) ) ) ) ) ) );
 	readData(yFrom, yTo, iName, dType);
+};
 
+$("#mySidenav").change(function () {
 	$("#selectPulau option:selected" ).each(function() {
 		var pulau = $(this).text();
 		$("#pulauName").text(truncateWithEllipses(pulau, 14));
@@ -589,4 +583,35 @@ $("#mySidenav").change(function () {
 		var yTo = Number($(this).text());
 		$('#tahunTo').text(yTo);
 	})
+
+	yFrom = Number($("#yearFrom option:selected").text());
+	yTo = Number($("#yearTo option:selected").text());
+	iName = $("#selectPulau option:selected" ).text();
+	if (iName == "Bali dan Nusa Tenggara") {
+		iName = "Nusa Tenggara";
+	}
+	isFlood = ( $('#banjir').attr('name') == 'banjir' && $('#banjir').is(':checked'));
+	isQuake = ( $('#gempabumi').attr('name') == 'gempabumi' && $('#gempabumi').is(':checked'));
+	isFFire = ( $('#kebakaran').attr('name') == 'kebakaran' && $('#kebakaran').is(':checked'));
+
+	dType = ( (isFlood && isQuake && isFFire) ? 1 : 
+						( (isFlood && isQuake) ? 5 : 
+							( (isFlood && isFFire) ? 6 : 
+								( (isQuake && isFFire) ? 7 : 
+									( isFlood ? 2 : 
+										( isQuake ? 3 :  
+											( isFFire ? 4 : 0 ) ) ) ) ) ) );
+	readData(yFrom, yTo, iName, dType);
+
+	if (dType == 2) {
+		$('#banjir').prop("disabled", true);
+	} else if (dType == 3) {
+		$('#gempabumi').prop("disabled", true);
+	} else if (dType == 4) {
+		$('#kebakaran').prop("disabled", true);
+	} else {
+		$('#banjir').prop("disabled", false);
+		$('#gempabumi').prop("disabled", false);
+		$('#kebakaran').prop("disabled", false);
+	}
 });
