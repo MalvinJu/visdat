@@ -378,7 +378,7 @@ function readData(yFrom, yTo, iName, dType) {
 					}
 				
 			}
-			strTooltip += "Total: " + shortenNum(totalDisasterDirty, '0.00 a')
+			strTooltip += "Total: " + shortenNum(totalLossDirty, '0.00 a')
 			if (totalFloodDisaster != 0) {
 				strTooltip += "\nBanjir: " + shortenNum(totalFloodDisaster, '0.00 a')
 			}
