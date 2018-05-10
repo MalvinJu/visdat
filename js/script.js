@@ -365,28 +365,28 @@ function readData(yFrom, yTo, iName, dType) {
 		for (i = 0; i < lossRegionMapArrayDirty.length / (yTo - yFrom + 1); i++) {
 			pulau = lossRegionMapArrayDirty[i][0];
 			totalLossDirty = 0;
-			totalFloodDisaster = 0;
-			totalQuakeDisaster = 0;
-			totalFireDisaster = 0;
+			totalFloodLoss = 0;
+			totalQuakeLoss = 0;
+			totalFireLoss = 0;
 			strTooltip = ""
 			for (j = 0; j < lossRegionMapArrayDirty.length; j++) {
 					if (lossRegionMapArrayDirty[i][0] == lossRegionMapArrayDirty[j][0]) {
 						totalLossDirty += lossRegionMapArrayDirty[j][1];
-						totalFloodDisaster += lossRegionMapArrayDirty[j][2];
-						totalQuakeDisaster += lossRegionMapArrayDirty[j][3];
-						totalFireDisaster += lossRegionMapArrayDirty[j][4];
+						totalFloodLoss += lossRegionMapArrayDirty[j][2];
+						totalQuakeLoss += lossRegionMapArrayDirty[j][3];
+						totalFireLoss += lossRegionMapArrayDirty[j][4];
 					}
 				
 			}
 			strTooltip += "Total: " + shortenNum(totalLossDirty, '0.00 a')
-			if (totalFloodDisaster != 0) {
-				strTooltip += "\nBanjir: " + shortenNum(totalFloodDisaster, '0.00 a')
+			if (totalFloodLoss != 0) {
+				strTooltip += "\nBanjir: " + shortenNum(totalFloodLoss, '0.00 a')
 			}
-			if (totalQuakeDisaster != 0) {
-				strTooltip += "\nGempa: " + shortenNum(totalQuakeDisaster, '0.00 a')
+			if (totalQuakeLoss != 0) {
+				strTooltip += "\nGempa: " + shortenNum(totalQuakeLoss, '0.00 a')
 			}
-			if (totalFireDisaster != 0) {
-				strTooltip += "\nKebakaran: " + shortenNum(totalFireDisaster, '0.00 a')
+			if (totalFireLoss != 0) {
+				strTooltip += "\nKebakaran: " + shortenNum(totalFireLoss, '0.00 a')
 			}
 			lossRegionMapArray.push([pulau, totalLossDirty, strTooltip]);
 		}
