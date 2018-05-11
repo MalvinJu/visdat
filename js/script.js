@@ -134,6 +134,9 @@ function readData(yFrom, yTo, iName, dType) {
 	barChartArrayDirty = [];
 	pieChartArray = [];
 	pieChartArray.push(pieChartLabel);
+	totalNumFlood = 0;
+	totalNumQuake = 0;
+	totalNumFFire = 0;
 	sumDisasterCount = 0;
 	sumLossCount = 0;
 	$.when(readDataFile()).then(function (data) {
@@ -142,9 +145,6 @@ function readData(yFrom, yTo, iName, dType) {
 			totalLossFlood = 0
 			totalLossQuake = 0
 			totalLossFire = 0
-			totalNumFlood = 0;
-			totalNumQuake = 0;
-			totalNumFFire = 0;
 			if (year >= yFrom && year <= yTo) {
 				$.each(yVal.dataPulau, function(iKey, iVal) {
 					pulau = iVal.pulau;
@@ -319,6 +319,7 @@ function readData(yFrom, yTo, iName, dType) {
 		arrNumQuake = ["Gempa Bumi", totalNumQuake];
 		arrNumFFire = ["Kebakaran Hutan", totalNumFFire];
 		pieChartArray.push(arrNumFlood, arrNumQuake, arrNumFFire);
+		console.log(pieChartArray);
 		for (i = 0; i < barChartArrayDirty.length/(yTo - yFrom+1); i++) {
 			pulau = barChartArrayDirty[i][0];
 			totalLossFire = barChartArrayDirty[i][3];
